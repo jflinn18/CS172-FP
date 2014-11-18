@@ -1,0 +1,16 @@
+What is Azir's Position?
+
+Go in and add "NA" to the champs that don't have secondary roles
+
+
+
+.txt Format: 
+list of counter Champs
+
+list of bad counter Champs
+
+primary role
+
+secondary role
+
+Positions
