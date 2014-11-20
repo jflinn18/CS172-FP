@@ -67,47 +67,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="2a4d10a7-a555-4e64-92f7-9f7a54dc26f3"
-            isDerived="false"
-            sourceEndRoleName="Champion"
-            targetEndRoleName="ChampDatabase"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="5e5895ad-6056-4601-ab66-b54eba59e9ca"
-              LastKnownName="ChampDatabase"
-              LastKnownLocation="ModelingProject1.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="4c65a0bf-8741-42c8-857f-f0579965f394"
-                  name="Champion"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="19d91c94-4a95-4d80-ad29-80570c2c3f91"
-                  name="ChampDatabase"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="245cb816-b444-434c-9ebf-8a0b826738a1"
@@ -375,48 +334,48 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="95aeda54-25e2-47a7-9edb-56102bdc9c0b"
+            Id="09b16d0a-a057-485c-8ae1-b67c341cc941"
             isDerived="false"
-            sourceEndRoleName="ChampDatabase"
-            targetEndRoleName="Main"
+            sourceEndRoleName="UI"
+            targetEndRoleName="Champion"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="01900d75-2378-4e78-868b-218f7e98e4dd"
-              LastKnownName="Main"
+              Id="cf5f87c4-651f-4607-8440-f6bff489e1f9"
+              LastKnownName="Champion"
               LastKnownLocation="ModelingProject1.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="13592c61-5d07-488b-a44e-820f8fd150b2"
-                  name="ChampDatabase"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="82c9b618-183b-425d-b944-f5328f278742"
-                  name="Main"
+                  Id="7ba6ed4e-33cc-442f-8ba5-1c4899d061fc"
+                  name="UI"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="true" />
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eca1d233-ccf3-40db-a514-94b640e0a07d"
+                  name="Champion"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="9eb33554-5abe-4a56-b598-2f7612566e2e"
+            Id="409c759f-70bc-4786-99e7-d5c804fdb50f"
             isDerived="false"
-            sourceEndRoleName="ChampDatabase"
+            sourceEndRoleName="UI"
             targetEndRoleName="CounterPickSearch"
             isLeaf="false"
             isAbstract="false">
@@ -427,20 +386,20 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="77a1fd1f-fc95-4220-8443-cd66540e949f"
-                  name="ChampDatabase"
+                  Id="cfd7e82b-17f3-4f91-ada4-34df69f3765f"
+                  name="UI"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
-                  aggregation="Composite"
+                  aggregation="None"
                   isComposite="false"
                   isNavigableOwned="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="002b16bb-bd2f-4451-8f9d-db03b1544a99"
+                  Id="62232672-4658-4c81-9a6d-710e19419773"
                   name="CounterPickSearch"
                   isLeaf="false"
                   isStatic="false"
@@ -448,7 +407,46 @@
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="true" />
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b5f877af-b798-43d7-b445-11c73d42ae16"
+            isDerived="false"
+            sourceEndRoleName="UI"
+            targetEndRoleName="Draft"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="71a17ac4-2b86-44b2-ba3b-52f40b5cb3ce"
+              LastKnownName="Draft"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6b3c91db-9395-4746-a0b2-a0412f242cfd"
+                  name="UI"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="41e53633-b373-44bd-bdfb-43c243cbfca1"
+                  name="Draft"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -476,6 +474,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="2645189d-2bc1-4864-90f2-ff022ce88e51"
+            isDerived="false"
+            sourceEndRoleName="Main"
+            targetEndRoleName="UI"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5e5895ad-6056-4601-ab66-b54eba59e9ca"
+              LastKnownName="ChampDatabase"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="413890d6-bba5-46e4-988b-9a8689bbfaaa"
+                  name="Main"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e285e42d-f881-471e-8e1b-f50d6a0521ef"
+                  name="UI"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="c86c1011-e862-4181-a8ea-7adce00f0f4c"
@@ -536,114 +575,10 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="ff25459a-df8a-42b9-9bd0-f6fec5266812"
-            isDerived="false"
-            sourceEndRoleName="Draft"
-            targetEndRoleName="UserInput"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="1648eac3-48b0-4032-9e26-d0dcfea4dbde"
-              LastKnownName="UserInput"
-              LastKnownLocation="ModelingProject1.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="7ee0f563-315a-4164-b1c8-35fcc8c3f8d3"
-                  name="Draft"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="92164492-12f1-4859-89aa-0bb3fd1fcc36"
-                  name="UserInput"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="51a1fb1e-da2c-4fa2-96ae-ad46edd7d6d0"
-            isDerived="false"
-            sourceEndRoleName="Draft"
-            targetEndRoleName="ChampDatabase"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="5e5895ad-6056-4601-ab66-b54eba59e9ca"
-              LastKnownName="ChampDatabase"
-              LastKnownLocation="ModelingProject1.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="30dd4673-2a17-4362-9e90-f4dcf27dc44b"
-                  name="Draft"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="48ad6cfc-2f84-45fb-9922-d536832ae5af"
-                  name="ChampDatabase"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property
-            Id="2fb0c0ed-896e-4dcd-a9d1-354086a2c2af"
-            name="UserInput ui;"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="52f6b065-73ec-4ded-9a63-8f0fbb24eb6f"
-            name="Team red;"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="79769923-5103-4211-9ff4-2184c94c6325"
-            name="Team blue"
+            Id="28e0a4e8-98fa-4413-848f-60f37f8ef269"
+            name="string name;"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -703,31 +638,6 @@
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
-          <operation
-            Id="16b51f0c-dd1a-4b8d-8d9c-7f05bbb16e02"
-            name="Draft"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="a971bfd8-aa8b-41ae-a951-50578b3317b6"
-                  name="UserInput"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="e6786f4e-017c-47eb-9984-ec0b67a4f29b"
-                  name="vector&lt;string&gt; champs"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -755,129 +665,14 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="f9d61a8f-6e01-45cf-a883-523fc524c29c"
-            name="banChamps"
+            Id="66c87bdf-4827-4576-a0e3-b321c4c4e0bd"
+            name="Operation1"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
-          <operation
-            Id="914671c4-4632-4d74-b582-43b4bdaae8a1"
-            name="pickChamps"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="9302d147-85df-4719-97b1-a86e9d47f06b"
-            name="clearWindow"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="3db9a42a-4d16-429b-8d08-dac351c96915"
-            name="outputChamp"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="32e849c7-a810-4ad5-b37c-22310b1a45bd"
-            name="outputWinner"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="b5fabab2-3756-4bf2-adaf-5a383fdf8fed"
-            name="outputTeamPoints"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="ac4a54cb-24fb-47a6-b513-ad7dcb8eb188"
-            name="UserInput"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="49566d4d-5c60-4c21-b270-c547afb25fb4"
-                  name="Team red"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="23db12d5-ce6c-47f3-b28f-eb46172b92ea"
-                  name="Team blue"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
         </ownedOperationsInternal>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="16ce5139-bb19-4362-8325-a979fada4f44"
-        name="Team"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="7d3bddb5-fec1-41ef-95b5-233787af322f"
-            isDerived="false"
-            sourceEndRoleName="Team"
-            targetEndRoleName="Draft"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="71a17ac4-2b86-44b2-ba3b-52f40b5cb3ce"
-              LastKnownName="Draft"
-              LastKnownLocation="ModelingProject1.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="c319e174-c1b8-4cc6-8d62-af9cea661f89"
-                  name="Team"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="8c7ec731-1bbe-47d2-a317-7144a844ee00"
-                  name="Draft"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
       </class>
     </packageHasNamedElement>
   </packagedElements>

@@ -14,7 +14,3 @@ primary role
 secondary role
 
 Positions
-
-
-
-System("cls");
