@@ -26,7 +26,7 @@
       <elementDefinition Id="6fbd1438-9e1c-4225-b8de-1e19d58e7b62" />
       <body>Output each Champ's data</body>
       <annotatedElements>
-        <classMoniker Id="51ffc412-08ed-40c4-96d6-6a9844a89ca8" LastKnownName="CounterPickSearch" />
+        <classMoniker Id="51ffc412-08ed-40c4-96d6-6a9844a89ca8" LastKnownName="ChampionSearch" />
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
@@ -146,7 +146,7 @@
       </referencedType>
     </packageHasNamedElement>
     <logicalClassDesignerModelHasTypes>
-      <class Id="51ffc412-08ed-40c4-96d6-6a9844a89ca8" name="CounterPickSearch" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="51ffc412-08ed-40c4-96d6-6a9844a89ca8" name="ChampionSearch" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="5688e511-2c22-4fd3-a2cb-f8554ac91528" />
         <ownedAttributesInternal>
           <property Id="733d2345-dcce-4837-87ab-51758a6a1d5a" name="string champNameSearch;" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -202,7 +202,7 @@
             <elementDefinition Id="95aeda54-25e2-47a7-9edb-56102bdc9c0b" />
           </association>
           <association Id="28d8da01-aed4-49a6-aad5-dab2e8719c3a" isDerived="false" sourceEndRoleName="ChampDatabase" targetEndRoleName="CounterPickSearch" isLeaf="false" isAbstract="false">
-            <classMoniker Id="51ffc412-08ed-40c4-96d6-6a9844a89ca8" LastKnownName="CounterPickSearch" />
+            <classMoniker Id="51ffc412-08ed-40c4-96d6-6a9844a89ca8" LastKnownName="ChampionSearch" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="34d2f631-56af-40b9-9cd7-4bb107701852" name="ChampDatabase" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
@@ -223,6 +223,24 @@
             <elementDefinition Id="2b130e32-d84f-4be8-85a8-0ae1758fcdde" />
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="969a4266-5119-4018-9d55-efb943ec96e2" name="completeADraft" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="84741286-101a-4528-a805-545f7a18be4b" />
+          </operation>
+          <operation Id="3fdc2e47-a466-4ed4-95fd-1784b7d7a1a2" name="addChamp" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a4f0bc3b-bc09-4675-8582-251f3edbd0ca" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8044ce6f-e965-4f19-976a-56826b13d949" name="Champion" direction="In" isUnique="false">
+                  <elementDefinition Id="70b89abe-4bb3-489c-be38-b420c1f9d8b8" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6a1ef2e4-55dc-4eb5-9b4a-bf1ce71c2357" name="getChamp" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4b7af98f-6d8b-4687-8a6e-fa18064aa78b" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -354,9 +372,30 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="36396372-80b1-4339-b2a9-f2dc042ab5cf" name="UserInput" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="1648eac3-48b0-4032-9e26-d0dcfea4dbde" />
+        <ownedAttributesInternal>
+          <property Id="5fc92f5c-5762-4135-9e53-71e46eed7bd2" name="string resp;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="656ae4b8-3fc5-4e9d-921b-6c0871708298" />
+          </property>
+          <property Id="3265ee39-9e9d-466e-86c4-2f4c44ded722" name="Team a;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="38346663-1cd9-45f0-9ee6-f0c812d402d3" />
+          </property>
+          <property Id="34e20306-d81b-4c30-81a9-300a506f11f3" name="Team b;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e78c38c6-9c34-47d5-9f54-8666ffa1848e" />
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="0440660c-a911-46e3-b1ff-0a35d0db8eed" name="getInput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="278ad77d-c506-48fc-9ba6-85670e04d443" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ab84fd03-515f-474e-ad79-6da70ac3d7ff" direction="Return" isUnique="false">
+                  <elementDefinition Id="49a4e451-0b99-496e-83e5-78da12c48dc5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="eaa1789a-c1ec-4f5a-88e0-4869f68b9d0b" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
           <operation Id="6fb27cb3-368e-4f5b-b752-27b65adfb2c6" name="banChamps" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="f9d61a8f-6e01-45cf-a883-523fc524c29c" />
@@ -391,6 +430,9 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation Id="63a7a0bc-a393-48a1-8b75-5f9e3e51d6b4" name="draft" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="34cd5927-297f-4a8d-a0b1-36ec2380e1f7" />
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -417,6 +459,11 @@
         </targetEnds>
       </class>
     </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="eaa1789a-c1ec-4f5a-88e0-4869f68b9d0b" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="168793a9-f748-4811-aafb-7b755b23af13" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="e0c0a662-e5e4-417d-9f47-5619409682f2" name="ModelingProject1">
     <elementDefinition Id="0bcf32c4-b0f0-469b-8138-fe3ae65e0e84" />

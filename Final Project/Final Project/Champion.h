@@ -16,7 +16,10 @@ public:
 	vector<string> _badChamps();
 	vector<string> _goodChamps();
 private:
-	
+	vector<string> getBadChamps();
+	vector<string> getGoodChapms();
+	void setBadChamps();
+	void getGoodChamps();
 };
 
 #endif

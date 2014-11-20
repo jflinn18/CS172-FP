@@ -40,7 +40,7 @@
       <annotatedElements>
         <classMoniker
           Id="5688e511-2c22-4fd3-a2cb-f8554ac91528"
-          LastKnownName="CounterPickSearch"
+          LastKnownName="ChampionSearch"
           LastKnownLocation="ModelingProject1.uml" />
       </annotatedElements>
     </comment>
@@ -297,7 +297,7 @@
     <packageHasNamedElement>
       <class
         Id="5688e511-2c22-4fd3-a2cb-f8554ac91528"
-        name="CounterPickSearch"
+        name="ChampionSearch"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -422,7 +422,7 @@
             isAbstract="false">
             <classMoniker
               Id="5688e511-2c22-4fd3-a2cb-f8554ac91528"
-              LastKnownName="CounterPickSearch"
+              LastKnownName="ChampionSearch"
               LastKnownLocation="ModelingProject1.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -467,6 +467,42 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="84741286-101a-4528-a805-545f7a18be4b"
+            name="completeADraft"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a4f0bc3b-bc09-4675-8582-251f3edbd0ca"
+            name="addChamp"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="70b89abe-4bb3-489c-be38-b420c1f9d8b8"
+                  name="Champion"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4b7af98f-6d8b-4687-8a6e-fa18064aa78b"
+            name="getChamp"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -745,6 +781,41 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="656ae4b8-3fc5-4e9d-921b-6c0871708298"
+            name="string resp;"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="38346663-1cd9-45f0-9ee6-f0c812d402d3"
+            name="Team a;"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e78c38c6-9c34-47d5-9f54-8666ffa1848e"
+            name="Team b;"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
             Id="278ad77d-c506-48fc-9ba6-85670e04d443"
@@ -753,7 +824,23 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="49a4e451-0b99-496e-83e5-78da12c48dc5"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="168793a9-f748-4811-aafb-7b755b23af13"
+                      LastKnownName="string"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="f9d61a8f-6e01-45cf-a883-523fc524c29c"
             name="banChamps"
@@ -827,6 +914,14 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="34cd5927-297f-4a8d-a0b1-36ec2380e1f7"
+            name="draft"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -879,6 +974,16 @@
           </association>
         </targetEnds>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+        name="void" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="168793a9-f748-4811-aafb-7b755b23af13"
+        name="string" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
