@@ -9,8 +9,10 @@ using namespace std;
 
 int main()
 {
+	// creates a champDatabase object
 	ChampDatabase c;
 
+	// calls the constructor for the champdatabase object
 	c.();
 
 }

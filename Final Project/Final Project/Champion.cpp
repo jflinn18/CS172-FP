@@ -6,16 +6,16 @@
 using namespace std;
 
 
-vector<string> Champion::getBadChamps() { return _badChamps; }
-vector<string> Champion::getGoodChapms(){ return _goodChamps; }
-string Champion::getPrimaryRole() { return _primaryRole; }
-string Champion::getSecondaryRole() { return _secondaryRole; }
-string Champion::getName() { return _name; }
+vector<string> Champion::getBadCounter() { return _badCounter; } // returns a list of champions that are bad counters
+vector<string> Champion::getGoodCounter(){ return _goodCounter; } // returns a list of champions that are good counters
+string Champion::getPrimaryRole() { return _primaryRole; } // returns the primary role 
+string Champion::getSecondaryRole() { return _secondaryRole; } // returns the secondary role
+string Champion::getName() { return _name; } // returns the name of the champion
 
 
 
-void Champion::setBadChamps(string champ) { _badChamps.push_back(champ); }
-void Champion::setGoodChamps(string champ) { _goodChamps.push_back(champ); }
-void Champion::setPrimaryRole(string pr) { _primaryRole = pr; }
-void Champion::setSecondaryRole(string sr) { _secondaryRole = sr; }
-void Champion::setName(string name) { _name = name; }
+void Champion::setBadCounter(string champ) { _badCounter.push_back(champ); } // adds a champion to the list of bad counters
+void Champion::setGoodCounter(string champ) { _goodCounter.push_back(champ); } // adds a champion to the list of good counters
+void Champion::setPrimaryRole(string pr) { _primaryRole = pr; } // sets the primary role
+void Champion::setSecondaryRole(string sr) { _secondaryRole = sr; } // sets the secondary role
+void Champion::setName(string name) { _name = name; } // sets the name

@@ -53,10 +53,10 @@
           </association>
         </targetEnds>
         <ownedAttributesInternal>
-          <property Id="e8438050-ac9b-48d6-8a90-73f07e8198e2" name="vector&lt;string&gt; GoodChamp;" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="e8438050-ac9b-48d6-8a90-73f07e8198e2" name="vector&lt;string&gt; GoodCounters;" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="245cb816-b444-434c-9ebf-8a0b826738a1" />
           </property>
-          <property Id="412013d2-d386-4b10-8714-37b4368e14d8" name="vector&lt;string&gt; BadChamp;" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="412013d2-d386-4b10-8714-37b4368e14d8" name="vector&lt;string&gt; BadCounters;" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="e090b8f3-2a86-4c0f-86d5-b5a70ee8a113" />
           </property>
           <property Id="d90a4252-44b2-491d-bf89-8daeb5ee886e" name="string Primary Role;" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -70,7 +70,7 @@
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation Id="e1eb07c7-b458-4804-a690-b32913570a0b" name="getChampGood" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="e1eb07c7-b458-4804-a690-b32913570a0b" name="getCounterGood" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="83784c26-3504-4eac-bf62-1ed4f51cce5a" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -83,7 +83,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="e7cc76c8-c5a4-47ed-a5a5-bca6d4d8112b" name="getChampBad" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="e7cc76c8-c5a4-47ed-a5a5-bca6d4d8112b" name="getCounterBad" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="d6c4fc21-d0a3-4e82-a495-6a031afa3ac2" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -96,14 +96,9 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="7bf7b1e9-7030-425c-b8e0-dd00ee0b725c" name="setChampGood" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="7bf7b1e9-7030-425c-b8e0-dd00ee0b725c" name="setCounterGood" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="ff79a965-5876-48b9-96fc-f2bf9270be27" />
             <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="6cb245ff-b7aa-4c75-b0eb-9d560be4aa93" name="string" direction="In" isUnique="false">
-                  <elementDefinition Id="a5fc9839-c05e-4d4a-bdd6-f629706743ba" />
-                </parameter>
-              </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter Id="a6f9eb9f-ea2c-4742-926f-344a71dd001a" direction="Return" isUnique="false">
                   <elementDefinition Id="9bebebdf-1159-4c93-b060-1b753645d697" />
@@ -112,22 +107,27 @@
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation Id="374f9a98-d5c2-42cd-9b01-90aa95237445" name="setChampBad" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="882d698e-2d33-46c4-b2fa-22cf9b9b19ae" />
-            <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="d82e6098-e5fb-4456-bb90-a78e0be7a105" name="string" direction="In" isUnique="false">
-                  <elementDefinition Id="4b7488d1-e3de-486a-9c73-cd7b87db06fd" />
+                <parameter Id="39873f9a-a7e9-4c80-8090-a6623b1cb1ba" name="string" direction="In" isUnique="false">
+                  <elementDefinition Id="65718439-ed00-4a40-a739-66db53d89e18" />
                 </parameter>
               </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="374f9a98-d5c2-42cd-9b01-90aa95237445" name="setCounterBad" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="882d698e-2d33-46c4-b2fa-22cf9b9b19ae" />
+            <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter Id="27e5ef5d-2dea-46a9-943c-0ad9ea8921e3" direction="Return" isUnique="false">
                   <elementDefinition Id="f9ecf7ee-164d-4627-98e9-29dc8fe211a6" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="abc7c926-291c-4e82-a16a-17089f9c2274" LastKnownName="void;" />
                   </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b9fa3ebe-9cf4-4e62-83fa-8d1ae5347f28" name="string" direction="In" isUnique="false">
+                  <elementDefinition Id="1e0c3637-1769-4201-a72d-cfa7cbb8c768" />
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
@@ -406,6 +406,9 @@
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
+          </operation>
+          <operation Id="7eebde3e-07a7-4c74-be38-a754f59b14f6" name="ChampDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="27d1cf30-b421-4ffe-8caa-8a7c43b50c7a" />
           </operation>
         </ownedOperationsInternal>
       </class>

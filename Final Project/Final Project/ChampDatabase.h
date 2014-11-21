@@ -14,9 +14,11 @@ class ChampDatabase
 private: 
 	vector<Champion> _champs;
 public:
+	ChampDatabase();
 	void completeADraft();
 	void addChamp(string);
 	Champion getChamp(Champion);
+	void createChampList();
 };
 
 #endif
