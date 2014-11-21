@@ -13,13 +13,20 @@ public:
 	string _name;
 	string _primaryRole;
 	string _secondaryRole;
-	vector<string> _badChamps();
-	vector<string> _goodChamps();
+	vector<string> _badChamps;
+	vector<string> _goodChamps;
 private:
 	vector<string> getBadChamps();
 	vector<string> getGoodChapms();
-	void setBadChamps();
-	void getGoodChamps();
+	string getPrimaryRole();
+	string getSecondaryRole();
+	string getName();
+	
+	void setBadChamps(string);
+	void setGoodChamps(string);
+	void setPrimaryRole(string);
+	void setSecondaryRole(string);
+	void setName(string);
 };
 
 #endif

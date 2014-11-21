@@ -12,11 +12,11 @@ using namespace std;
 class ChampDatabase
 {
 private: 
-	vector<Champion> champs();
+	vector<Champion> _champs;
 public:
 	void completeADraft();
-	void addChamp(Champion);
-	Champion getChamp();
+	void addChamp(string);
+	Champion getChamp(Champion);
 };
 
 #endif
