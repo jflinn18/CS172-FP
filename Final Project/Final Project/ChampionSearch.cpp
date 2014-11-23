@@ -15,10 +15,6 @@ ChampionSearch::ChampionSearch(vector<string> &champs)
 }
 
 
-//void ChampionSearch::setChampNameSearch(string name) { _champNameSearch = name; }
-//string ChampionSearch::getChampNameSearch() { return _champNameSearch; }
-
-
 // searches for the champion name that is given to the function
 int ChampionSearch::search(string &name)
 {

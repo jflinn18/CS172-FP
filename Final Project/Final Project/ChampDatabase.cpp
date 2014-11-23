@@ -20,15 +20,47 @@ ChampDatabase::ChampDatabase()
 //   that data. It then stores that data into the vector of champions.
 void ChampDatabase::addChamp(string &champName)
 {
-	Champion c; 
+	Champion c;  // creates a new Champion object to make
 	fstream filein;
+	string s;
 
-	filein.open(champName + ".txt");
+	c.setName(champName); // sets the name of the champion
 
-	if (filein.fail())
+	filein.open(champName + ".txt"); // opens the corresponding champion file
+
+	if (filein.fail()) 
 	{
-		cout << "Can't find " << champName << ".txt " << endl;
-		exit(0);
+		cout << "Can't find " << champName << ".txt " << endl; // tells the user that the programs couldn't find a certain champ .txt file
+		exit(0); // ends the program
+	}
+
+	while (!filein.fail()) // reads in all of the data from the file
+	{
+		while(!(s == "\n")) // reads and adds data into c.goodCounters until the paragraph break
+		{
+			getline(filein, s);
+			c.setGoodCounter(s);
+		}
+
+		while (!(s == "\n")) // reads and adds data into c.badCounters until the paragraph break
+		{
+			getline(filein, s);
+			c.setBadCounter(s);
+		}
+
+		getline(filein, s); // gets the primary role of the champion and adds it to the champion object
+		c.setPrimaryRole(s);
+
+		getline(filein, s);
+		c.setSecondaryRole(s); // gets the secondary role of the champion and adds it to the champion object
+
+		getline(filein, s); // clears the \n character in between the roles and the positions in the file
+
+		while (!filein.fail()) // reads and adds data into c.positions until the paragraph break
+		{
+			getline(filein, s);
+			c.setPositions(s);S
+		}
 	}
 
 

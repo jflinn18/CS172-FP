@@ -15,10 +15,12 @@ private:
 	string _secondaryRole;
 	vector<string> _badCounter;
 	vector<string> _goodCounter;
+	vector<string> _positions;
 
 public:
 	vector<string> getBadCounter();
 	vector<string> getGoodCounter();
+	vector<string> getPositions();
 	string getPrimaryRole();
 	string getSecondaryRole();
 	string getName();
@@ -28,6 +30,7 @@ public:
 	void setPrimaryRole(string);
 	void setSecondaryRole(string);
 	void setName(string);
+	void setPositions(string);
 };
 
 #endif

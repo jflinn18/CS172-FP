@@ -14,13 +14,10 @@ class ChampionSearch
 {
 private: 
 	vector<string> _champs;
-	//string _champNameSearch;
 
 public:
 	ChampionSearch();
 	ChampionSearch(vector<string>&);
-	//void setChampNameSearch(string);
-	//string getChampNameSearch();
 
 	int search(string&);
 };
