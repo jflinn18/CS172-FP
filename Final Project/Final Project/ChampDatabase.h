@@ -6,18 +6,22 @@
 #include <string>
 #include <vector>
 #include "Champion.h"
+#include "ChampionSearch.h"
 
 using namespace std;
+
 
 class ChampDatabase
 {
 private: 
 	vector<Champion> _champs;
+	vector<string> _listOfChampNames;
+	ChampionSearch champSearch;
 public:
 	ChampDatabase();
 	void completeADraft();
-	void addChamp(string);
-	Champion getChamp(Champion);
+	void addChamp(string&);
+	Champion getChamp(string&);
 	void createChampList();
 };
 

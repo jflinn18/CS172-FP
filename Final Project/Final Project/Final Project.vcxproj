@@ -78,6 +78,7 @@
   <ItemGroup>
     <ClCompile Include="ChampDatabase.cpp" />
     <ClCompile Include="Champion.cpp" />
+    <ClCompile Include="ChampionSearch.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>

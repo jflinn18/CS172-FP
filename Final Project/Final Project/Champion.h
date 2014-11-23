@@ -9,13 +9,14 @@ using namespace std;
 
 class Champion
 {
-public:
+private:
 	string _name;
 	string _primaryRole;
 	string _secondaryRole;
 	vector<string> _badCounter;
 	vector<string> _goodCounter;
-private:
+
+public:
 	vector<string> getBadCounter();
 	vector<string> getGoodCounter();
 	string getPrimaryRole();

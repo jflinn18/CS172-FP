@@ -469,7 +469,7 @@
         <ownedAttributesInternal>
           <property
             Id="6af3d40a-ffc2-436f-a2cf-1a6eb71159db"
-            name="string champNameSearch;"
+            name="vector&lt;string&gt; _champs"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -497,15 +497,15 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="b57cbe4c-c620-4295-a2d6-9058cf3a0386"
-                      LastKnownName="void;"
+                      Id="f7edc520-3299-4844-ab87-f067e8a4a011"
+                      LastKnownName="int;"
                       LastKnownLocation="ModelingProject1.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="f39aa46a-498f-4be2-a32c-12c20cf04bb3"
+                  Id="fb2dc14b-1b1d-45fc-b58c-85e88d0fb7d4"
                   name="string"
                   direction="In"
                   isUnique="false" />
@@ -513,60 +513,13 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="cb9a7fc6-f471-4f05-b549-06127954fabb"
-            name="getChampName"
+            Id="f7734ee7-6131-4034-a02f-e460f8569b06"
+            name="ChampionSearch"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="fb525870-ea96-4200-9262-1347c38d69df"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="cf5f87c4-651f-4607-8440-f6bff489e1f9"
-                      LastKnownName="Champion"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="7c13dbe4-b85b-469d-a19f-2b694db4327d"
-            name="setChampName"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="45c96cc1-8f65-43ba-b4e0-9d5b00beaa95"
-                  name="string"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="ba4029de-def3-4a8c-b9a1-c9354db4520d"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
-                      LastKnownName="void"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1444,6 +1397,11 @@
       <undefinedType
         Id="168793a9-f748-4811-aafb-7b755b23af13"
         name="string" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="f7edc520-3299-4844-ab87-f067e8a4a011"
+        name="int;" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
