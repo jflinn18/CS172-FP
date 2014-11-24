@@ -1115,14 +1115,7 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="a971bfd8-aa8b-41ae-a951-50578b3317b6"
-                  name="UserInput"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="e6786f4e-017c-47eb-9984-ec0b67a4f29b"
+                  Id="3be21b7f-d18c-4b73-837c-e706ed202156"
                   name="vector&lt;string&gt; champs"
                   direction="In"
                   isUnique="false" />
@@ -1222,8 +1215,8 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="168793a9-f748-4811-aafb-7b755b23af13"
-                      LastKnownName="string"
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
                       LastKnownLocation="ModelingProject1.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -1246,8 +1239,8 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="168793a9-f748-4811-aafb-7b755b23af13"
-                      LastKnownName="string"
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
                       LastKnownLocation="ModelingProject1.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -1377,7 +1370,7 @@
           </operation>
           <operation
             Id="34cd5927-297f-4a8d-a0b1-36ec2380e1f7"
-            name="draft"
+            name="whatDraft"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -1393,6 +1386,55 @@
                     <undefinedTypeMoniker
                       Id="168793a9-f748-4811-aafb-7b755b23af13"
                       LastKnownName="string"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="47b0eb77-8d61-411b-a5a0-13dab3c25bf5"
+            name="checkResp"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b76f06f7-0d6d-4152-b94d-1f5e67412874"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="098aa5b4-c500-46df-b1e8-194f8d69dd88"
+            name="draftOuput"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c0f51cdf-f5da-41fb-9280-dfb809e89954"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
                       LastKnownLocation="ModelingProject1.uml" />
                   </type_NamedElement>
                 </parameter>

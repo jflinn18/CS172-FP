@@ -551,13 +551,8 @@
             <elementDefinition Id="16b51f0c-dd1a-4b8d-8d9c-7f05bbb16e02" />
             <ownedParameters>
               <operationHasOwnedParameters>
-                <parameter Id="38ca8903-8c47-489c-9165-0de5fc743a22" name="UserInput" direction="In" isUnique="false">
-                  <elementDefinition Id="a971bfd8-aa8b-41ae-a951-50578b3317b6" />
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="1c9c64ba-687b-4419-8737-4c543d68e248" name="vector&lt;string&gt; champs" direction="In" isUnique="false">
-                  <elementDefinition Id="e6786f4e-017c-47eb-9984-ec0b67a4f29b" />
+                <parameter Id="03c5c692-3b32-41ad-b392-c915ffe9bba0" name="vector&lt;string&gt; champs" direction="In" isUnique="false">
+                  <elementDefinition Id="3be21b7f-d18c-4b73-837c-e706ed202156" />
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
@@ -605,7 +600,7 @@
                 <parameter Id="93e549d9-b5e8-4600-b7f7-cc1b6ae31d90" direction="Return" isUnique="false">
                   <elementDefinition Id="7143280c-5c24-4e6e-ac2b-47446726fbcc" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="eaa1789a-c1ec-4f5a-88e0-4869f68b9d0b" LastKnownName="string" />
+                    <referencedTypeMoniker Id="81f74c05-cd2f-4701-bbe4-fa3b5e1207e1" LastKnownName="void" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -618,7 +613,7 @@
                 <parameter Id="4078d040-be69-4f47-9f6e-4544afdbe739" direction="Return" isUnique="false">
                   <elementDefinition Id="2935e74f-6342-4a3d-8e4e-ceb83c74a327" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="eaa1789a-c1ec-4f5a-88e0-4869f68b9d0b" LastKnownName="string" />
+                    <referencedTypeMoniker Id="81f74c05-cd2f-4701-bbe4-fa3b5e1207e1" LastKnownName="void" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -691,7 +686,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="63a7a0bc-a393-48a1-8b75-5f9e3e51d6b4" name="draft" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="63a7a0bc-a393-48a1-8b75-5f9e3e51d6b4" name="whatDraft" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="34cd5927-297f-4a8d-a0b1-36ec2380e1f7" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -699,6 +694,32 @@
                   <elementDefinition Id="d4a0ac8d-2e8a-4d86-9d89-6f7fd4052100" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="eaa1789a-c1ec-4f5a-88e0-4869f68b9d0b" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="ca3af0c2-a660-4b7c-a9e4-cc72e7ef78f8" name="checkResp" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="47b0eb77-8d61-411b-a5a0-13dab3c25bf5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fc74777c-8449-4c14-b5a3-2df7d922035b" direction="Return" isUnique="false">
+                  <elementDefinition Id="b76f06f7-0d6d-4152-b94d-1f5e67412874" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="81f74c05-cd2f-4701-bbe4-fa3b5e1207e1" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="ade3985a-a111-476c-aac1-f00c9eefde48" name="draftOuput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="098aa5b4-c500-46df-b1e8-194f8d69dd88" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="91d181b3-3ced-41bf-9cee-203e9ed7a135" direction="Return" isUnique="false">
+                  <elementDefinition Id="c0f51cdf-f5da-41fb-9280-dfb809e89954" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="81f74c05-cd2f-4701-bbe4-fa3b5e1207e1" LastKnownName="void" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>

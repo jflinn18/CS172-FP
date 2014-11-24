@@ -13,5 +13,6 @@ LeBlanc
 Nidalee
 
 Mage
+na
 
 Mid
