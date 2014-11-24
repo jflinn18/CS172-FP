@@ -315,6 +315,9 @@
           <property Id="943baf64-f963-4cff-b7dd-5fb76828147b" name="vector&lt;string&gt; listOfChampNames;" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="92e982a9-2bfb-4ef1-9a29-d74e5b16e931" />
           </property>
+          <property Id="32601228-6749-47f3-b866-29002e7b15c7" name="ChampionSearch champSearch;" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5979e3da-35ab-4f06-851f-6a65f9e5ac74" />
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="969a4266-5119-4018-9d55-efb943ec96e2" name="completeADraft" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -330,20 +333,20 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="3fdc2e47-a466-4ed4-95fd-1784b7d7a1a2" name="addChamp" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="3fdc2e47-a466-4ed4-95fd-1784b7d7a1a2" name="addChamp" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="a4f0bc3b-bc09-4675-8582-251f3edbd0ca" />
             <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="aec90c82-9529-44a4-b8b6-630a6697de2a" name="Champion" direction="In" isUnique="false">
-                  <elementDefinition Id="34360650-f315-4c7f-9eaf-088d0f2119c2" />
-                </parameter>
-              </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter Id="4ab1f47d-5d85-4fe4-b58a-fa8c924380b7" direction="Return" isUnique="false">
                   <elementDefinition Id="fa5bedc1-a106-467d-97cc-86f66d69ec8b" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="81f74c05-cd2f-4701-bbe4-fa3b5e1207e1" LastKnownName="void" />
                   </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="52b1e8bc-4f9c-4949-9e94-c502cf3fa5f9" name="Champion" direction="In" isUnique="false">
+                  <elementDefinition Id="f86c75f1-a882-4f7b-b742-5f377e80fd69" />
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
@@ -366,7 +369,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="dbb66eea-506c-4044-9255-9b6f14eca10f" name="createChampList" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="dbb66eea-506c-4044-9255-9b6f14eca10f" name="createChampList" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="45991740-e1c4-44f8-8d5f-d2d29f76f738" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -381,6 +384,32 @@
           </operation>
           <operation Id="7eebde3e-07a7-4c74-be38-a754f59b14f6" name="ChampDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="27d1cf30-b421-4ffe-8caa-8a7c43b50c7a" />
+          </operation>
+          <operation Id="d7d3e86b-8882-422b-9ac8-85296b6e9127" name="setChampSearch" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6692068b-5ef5-44f6-9fec-a32c4a00cede" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="424c70c1-dee7-4799-b817-c8c953617ab3" direction="Return" isUnique="false">
+                  <elementDefinition Id="c408af90-e120-4ae5-ad67-842b1d7e2afe" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="abc7c926-291c-4e82-a16a-17089f9c2274" LastKnownName="void;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="41656387-ada2-47f2-a66f-782fb9d28a13" name="createChamps" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="989f0295-112b-4699-bc03-129aaedc58be" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bf414b79-0634-40f9-a589-7ad47d7c3324" direction="Return" isUnique="false">
+                  <elementDefinition Id="9ae2e9ce-b591-4c64-9702-83753b1c21ad" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="81f74c05-cd2f-4701-bbe4-fa3b5e1207e1" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
           </operation>
         </ownedOperationsInternal>
       </class>

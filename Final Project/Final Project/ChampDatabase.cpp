@@ -16,6 +16,25 @@ ChampDatabase::ChampDatabase()
 	completeADraft();
 }
 
+
+// this function completes one interation of a draft. 
+void ChampDatabase::completeADraft()
+{
+	setChampSearch(); // calls the function that initializes the ChampionSearch Object member
+	createChampList(); // calls the function that creates the list of names for the champions
+	createChamps(); // call the funtion that creates the vector of champion objects
+
+
+	// Call the constructor for a draft class that will iterate through one draft.
+
+	/*Draft d;
+
+	// add the arguments that the constructor calls for.
+	d();*/
+}
+
+
+
 // gets a name from the list of champ names and opens the corresponding .txt file and creates a champion object from 
 //   that data. It then stores that data into the vector of champions.
 void ChampDatabase::addChamp(string &champName)
@@ -59,11 +78,9 @@ void ChampDatabase::addChamp(string &champName)
 		while (!filein.fail()) // reads and adds data into c.positions until the paragraph break
 		{
 			getline(filein, s);
-			c.setPositions(s);S
+			c.setPositions(s);
 		}
 	}
-
-
 
 	_champs.push_back(c);
 }
@@ -74,14 +91,6 @@ Champion ChampDatabase::getChamp(string &champ)
 {
 	// searches for the champion and returns that champion
 	return _champs[champSearch.search(champ)];
-}
-
-// this function completes one interation of a draft. 
-void ChampDatabase::completeADraft()
-{
-	/*Draft d;
-
-	d();*/
 }
 
 
@@ -106,4 +115,19 @@ void ChampDatabase::createChampList()
 		readin >> s;
 		_listOfChampNames.push_back(s);
 	}
+}
+
+
+// creates the vector of champion objects
+void ChampDatabase::createChamps()
+{
+	for (int i = 0; i < _listOfChampNames.size(); i++)
+		addChamp(_listOfChampNames[0]); // adds one champion object for each champion in the listOfChampNames vector
+}
+
+
+void ChampDatabase::setChampSearch()
+{
+	ChampionSearch cs(_listOfChampNames);
+	champSearch = cs;
 }

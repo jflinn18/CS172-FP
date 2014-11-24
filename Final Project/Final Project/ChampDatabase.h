@@ -17,12 +17,17 @@ private:
 	vector<Champion> _champs;
 	vector<string> _listOfChampNames;
 	ChampionSearch champSearch;
+	void setChampSearch();
+	void addChamp(string&);
+	void createChampList();
+	void createChamps();
+
 public:
 	ChampDatabase();
 	void completeADraft();
-	void addChamp(string&);
 	Champion getChamp(string&);
-	void createChampList();
+	
+	
 };
 
 #endif
