@@ -12,5 +12,6 @@ Ziggs
 Aatrox
 
 Mage
+na
 
 Mid
