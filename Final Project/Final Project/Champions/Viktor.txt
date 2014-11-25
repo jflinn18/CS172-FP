@@ -13,6 +13,5 @@ Fizz
 Ahri
 
 Mage
-na
 
 Mid

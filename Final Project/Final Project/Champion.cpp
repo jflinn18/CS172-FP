@@ -19,4 +19,3 @@ void Champion::setGoodCounter(string champ) { _goodCounter.push_back(champ); } /
 void Champion::setPrimaryRole(string pr) { _primaryRole = pr; } // sets the primary role
 void Champion::setSecondaryRole(string sr) { _secondaryRole = sr; } // sets the secondary role
 void Champion::setName(string name) { _name = name; } // sets the name
-void Champion::setPositions(string pos) { _positions.push_back(pos); } // adds a position that the champion can play

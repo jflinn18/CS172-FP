@@ -2,7 +2,6 @@
 #define _UserInput_h
 
 #include <iostream>
-#include "Champion.h"
 #include "Team.h"
 #include <string>
 
@@ -11,28 +10,20 @@ using namespace std;
 
 class UserInput
 {
-private:
+public:
 	string resp;
 	Team a;
 	Team b;
 
-	void checkResp();
-
-
-public:
-	UserInput();
-	UserInput(Team, Team);
-	string whatDraft();
-	string getInput();
-
+	UserInput(Team a, Team b);
+	void draft();
 	void banChamps();
 	void pickChamps();
-	void outputChamp(Champion);
-	void outputTeamPoints(string);
-	void outputWinner(string);
-	void draftOutput();
+	void outputChamp();
+	void outputTeamPoints();
+	void outputWinner();
+	string getInput();
 
-	void printMan();
 	void clearWindow();
 };
 

@@ -13,6 +13,5 @@ Tristana
 Miss_Fortune
 
 Marksman
-na
 
 Adc

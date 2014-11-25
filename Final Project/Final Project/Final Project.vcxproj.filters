@@ -24,14 +24,7 @@
     <ClCompile Include="ChampDatabase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-<<<<<<< HEAD
     <ClCompile Include="..\..\..\..\CS-172\finalproject\draft\draft\Team.cpp">
-=======
-    <ClCompile Include="ChampionSearch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="UserInput.cpp">
->>>>>>> origin/master
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
