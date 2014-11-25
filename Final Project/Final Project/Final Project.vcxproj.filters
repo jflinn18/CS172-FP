@@ -13,10 +13,13 @@
     <ClCompile Include="Main.cpp">
       <Filter>SourceCode</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\CS-172\finalproject\draft\draft\Team.cpp">
+    <ClCompile Include="UserInput.cpp">
       <Filter>SourceCode</Filter>
     </ClCompile>
-    <ClCompile Include="UserInput.cpp">
+    <ClCompile Include="Draft.cpp">
+      <Filter>SourceCode</Filter>
+    </ClCompile>
+    <ClCompile Include="Team.cpp">
       <Filter>SourceCode</Filter>
     </ClCompile>
   </ItemGroup>
@@ -30,10 +33,13 @@
     <ClInclude Include="ChampionSearch.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\CS-172\finalproject\draft\draft\Team.h">
+    <ClInclude Include="UserInput.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="UserInput.h">
+    <ClInclude Include="Team.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Draft.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>
