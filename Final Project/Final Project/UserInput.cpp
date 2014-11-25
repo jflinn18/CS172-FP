@@ -158,6 +158,7 @@ void UserInput::printMan()
 }
 
 // checks to make sure that the user doesn't want something that the computer isn't asking for. 
+// and it checks to make sure that the user spelled the champion's name correctly
 void UserInput::checkResp()
 {
 	if (resp.find("-x") > 0)
@@ -165,4 +166,7 @@ void UserInput::checkResp()
 	
 	if (resp.find("-man") > 0)
 		printMan();
+
+	// write code to check whether the user miss spelled a word
+	//    comapare the input with the vector<string> of Champion names
 }

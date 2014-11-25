@@ -524,6 +524,9 @@
           <property Id="880e6892-33f4-4369-a734-666eb8b79c61" name="Team blue" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="79769923-5103-4211-9ff4-2184c94c6325" />
           </property>
+          <property Id="d90c98f6-fff9-4978-b651-a4335a388496" name="vector&lt;string&gt; champs;" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f934fcac-9c6e-4c94-9c09-7269cd037038" />
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="0342ec60-bf1a-4d8c-b239-5ff0693275eb" name="examineUserInput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
