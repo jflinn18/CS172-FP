@@ -9,15 +9,18 @@ using namespace std;
 
 class Champion
 {
-public:
+private:
 	string _name;
 	string _primaryRole;
 	string _secondaryRole;
 	vector<string> _badCounter;
 	vector<string> _goodCounter;
-private:
+	vector<string> _positions;
+
+public:
 	vector<string> getBadCounter();
 	vector<string> getGoodCounter();
+	vector<string> getPositions();
 	string getPrimaryRole();
 	string getSecondaryRole();
 	string getName();
@@ -27,6 +30,7 @@ private:
 	void setPrimaryRole(string);
 	void setSecondaryRole(string);
 	void setName(string);
+	void setPositions(string);
 };
 
 #endif

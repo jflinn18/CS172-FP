@@ -5,19 +5,21 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Champion.h"
+
 
 using namespace std;
 
 class ChampionSearch
 {
 private: 
-	string champNameSearch;
+	vector<string> _champs;
 
 public:
-	void setChampName(string);
-	string getChampName();
+	ChampionSearch();
+	ChampionSearch(vector<string>&);
 
-	void search(string);
+	int search(string&);
 };
 
 #endif

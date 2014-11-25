@@ -13,5 +13,6 @@ Kayle
 Lux
 
 Mage
+na
 
 Mid

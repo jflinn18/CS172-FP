@@ -11,7 +11,9 @@ Heimerdinger
 Teemo
 Nasus
 
-
 Mage
 Marksman
+
+Top
+Mid
 
