@@ -24,6 +24,9 @@
     <ClCompile Include="ChampDatabase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\CS-172\finalproject\draft\draft\Team.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChampDatabase.h">
@@ -37,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="ChampionSearch.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\CS-172\finalproject\draft\draft\Team.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

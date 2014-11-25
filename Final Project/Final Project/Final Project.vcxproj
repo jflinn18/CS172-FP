@@ -76,11 +76,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\CS-172\finalproject\draft\draft\Team.cpp" />
     <ClCompile Include="ChampDatabase.cpp" />
     <ClCompile Include="Champion.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\CS-172\finalproject\draft\draft\Team.h" />
     <ClInclude Include="ChampDatabase.h" />
     <ClInclude Include="Champion.h" />
     <ClInclude Include="ChampionSearch.h" />
