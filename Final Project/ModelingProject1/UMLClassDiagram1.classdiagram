@@ -572,8 +572,13 @@
                 <parameter Id="3c7cd349-a9b9-485c-929d-0d543e44bd11" direction="Return" isUnique="false">
                   <elementDefinition Id="19f963ce-83e4-47d4-8ac9-c545fbd44036" />
                   <type_NamedElement>
-                    <referencedTypeMoniker Id="eaa1789a-c1ec-4f5a-88e0-4869f68b9d0b" LastKnownName="string" />
+                    <referencedTypeMoniker Id="81f74c05-cd2f-4701-bbe4-fa3b5e1207e1" LastKnownName="void" />
                   </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="884b6dde-3b6b-432d-9f13-9ef3141f2da1" name="string" direction="In" isUnique="false">
+                  <elementDefinition Id="3ede0924-d3a1-4a8e-a145-df3966a3f0db" />
                 </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>

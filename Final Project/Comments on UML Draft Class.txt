@@ -1,0 +1,133 @@
+class Draft
+{
+private: 
+	Team blue;
+	Team red;
+	UserInput ui;
+
+public:
+	Draft(vector<string> champs); 
+	/* 
+	Constructor for the draft object.  I would be calling this function from 
+	the ChampDatabase class.
+	*/
+
+	void examineUserInput();
+	/*
+	This function would examine the string that is returned from ui.getInput().
+	I really don't know what I was thinking when I wrote this.  You probably hard code
+	what this would do when you call the ui.getInput() function
+	*/
+
+	void executeDraft();
+	/*
+	Like we talked about in class, this is the "main" for this class.  This will be
+	doing all of the executing of different functions to get through a draft.
+
+	This will probably look like:
+	virtual void executeDraft();
+
+	If it looks like the above line, there would not be a body for this function.
+	It would be overrode in both of the subclasses of Draft.  Thus, no body for this 
+	function.  It would be in the two subclasses.
+	*/
+
+	Champion generateChamp();
+	/*
+	This would be for the computer to generate a champ depending on what is needed for
+	its team.  This could mean that there needs to be a vector in team that has
+	the positions that are already filled for the team.  But this could also be for 
+	generating a good counter.  Or maybe that should be another function.
+	*/
+
+	string getChampName();
+	/*
+	I don't remember what I was thinking here.  You don't need to return the names in
+	teamChampNames.  That is already in the Team class.  You also don't need to get 
+	the user input because ui.getInput and examineUserInput already do more than 
+	enough for that.
+	*/
+
+	void setChampName(string);
+	/*
+	This would give the champion name to the team that it goes with.  For example: 
+	when I input that I want Kha'zix, this function would store "Kha'zix" into the
+	vector<string> teamChampNames in the Team Class.
+
+	Or maybe this would call the function addTeamChampNames("ChampName") in the Team
+	class.
+	*/
+
+	void takeTurn();
+	/*
+	I was thinking that this could be one turn.  But you made a really good point in
+	class today that each turn was different.  You know, 1 pick -> 2 pick, 2 pick ->
+	2 pick, etc. 
+
+	This changes the inheritence and polymorphism of the two different drafts.  But 
+	more on when I get there. 
+	*/
+
+	int whoseTurn();
+	/*
+	This was really to go hand in hand with the above function.  Without that function
+	it really isn't needed.
+	*/
+};
+
+
+
+
+class DraftAgainstComp : public Draft
+{
+public: 
+	void executeDraft();
+	/*
+	This would include the draft that starts with the computer banning and picking
+	first.
+	*/
+};
+
+
+
+class ComputerSimulation : public Draft
+{
+public: 
+	void executeDraft();
+	/*
+	This would include the draft that the user inputs champions and the computer 
+	counters those champions.
+	*/
+};
+
+
+
+class Team // I don't think it would need to have inheritance with the Champion class
+{
+private: 
+	int points;
+	vector<string> teamChampNames;
+
+public: 
+	void addTeamChampNames(string);
+	/*
+	This would "push_back" the teamChampNames with whatever the function's 
+	parameter is. 
+	*/
+
+	int getPoints();
+	/*
+	This would return the points member.
+	*/
+
+	vector<string> getTeamChampNames();
+	/*
+	This would return the whole vector of champ names that that team has. 
+	*/
+
+	void setPoints();
+	/*
+	This could also be an "addPoints()" function that adds 1 to whatever points is 
+	when this function is called. 
+	*/
+};
