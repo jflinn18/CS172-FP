@@ -1278,6 +1278,7 @@
           <property
             Id="656ae4b8-3fc5-4e9d-921b-6c0871708298"
             name="string resp;"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1287,19 +1288,9 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="38346663-1cd9-45f0-9ee6-f0c812d402d3"
-            name="Team a;"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-          <property
-            Id="e78c38c6-9c34-47d5-9f54-8666ffa1848e"
-            name="Team b;"
+            Id="5772a510-f73a-4ab8-8c41-21e32563b85c"
+            name="vector&lt;vector&lt;string&gt;&gt; outputFramework;"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1555,6 +1546,7 @@
           <operation
             Id="098aa5b4-c500-46df-b1e8-194f8d69dd88"
             name="draftOuput"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -1564,6 +1556,54 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="c0f51cdf-f5da-41fb-9280-dfb809e89954"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1ab3c888-b24b-4481-856b-61d67565604e"
+            name="updatebans"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9132e794-606d-4aee-93c0-a962550ec53f"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="100509c0-e17a-49ca-83cd-b0b11a1e274c"
+            name="updatePicks"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a86dbaae-54bd-452b-be63-391319714002"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>

@@ -1,7 +1,11 @@
+WARNING: This just kind of kept growing and growing and growing.  Sorry for the length of the document.  These are just ideas.  I did write in a c++ friendly syntax.  If you really want to, you could just copy and paste this into the header files.  But you might want to do it all yourself.  That is completely fine.  I did it this way for options. 
+
+
+
 class Draft
 {
 private: 
-	Team blue;
+	Team blue; // maybe Team user and Team computer
 	Team red;
 	UserInput ui;
 
@@ -15,8 +19,7 @@ public:
 	void examineUserInput();
 	/*
 	This function would examine the string that is returned from ui.getInput().
-	I really don't know what I was thinking when I wrote this.  You probably hard code
-	what this would do when you call the ui.getInput() function
+	I really don't know what I was thinking when I wrote this.  You could probably 		hard code what this would do when you call the ui.getInput() function
 	*/
 
 	void executeDraft();
@@ -66,6 +69,42 @@ public:
 
 	This changes the inheritence and polymorphism of the two different drafts.  But 
 	more on when I get there. 
+
+
+	I woke up this morning thinking about the project (11/26).  I was thinking, the 
+	pattern of turn taking is for either draft:  
+	1) 1 pick -> 2 pick
+	2) 2 pick -> 2 pick
+	3) 2 pick -> 1 pick
+
+	You might think about creating three turn methods; one for each of the above. 
+	It would have to have a conditional to figure out who is going first. But other
+	than that, they would be the same framework for a turn.  
+	Plus it would help me with the draftOutput function of UserInput. 
+
+	I was thinking that we could use a 2D vector or array that is set to 6 rows and 3
+	columns. We could initialize it to: 
+	
+	Computer:           Banned:           User: 
+	---------           -------           -----
+	---------           -------           -----
+	---------           -------           -----
+	---------           -------           -----
+	---------           -------           -----
+
+	And then when you go through the turns, you could use a for loop to place both 
+	Team's vector<string> teamChampNames and the banned champs into there designated 		columns and then pass that 2D vector into the ui.draftOutput function.  Or....you 		
+	could pass in the three above mentioned 1D vectors and I could do what I just said 
+	in the draftOutput function.  This is how I'm going to code it for now. 
+
+	When either Team's teamChampNames change or the banned champs you could call the 
+	the correct "update" method in UI.  There is a method to update the banned champs
+	and then there is a method to update the picked champions. 
+
+	NOTE: in UserInput::updatepicks, the user's picks is always passed in first.
+
+	If, however, you decide to 2D vector and pass it in to me, you might consider
+	using a variable in the public section in the Draft header file for the 2D vector. 
 	*/
 
 	int whoseTurn();

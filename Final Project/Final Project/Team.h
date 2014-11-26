@@ -7,7 +7,7 @@
 using namespace std;
 
 
-class Team : public Champion{
+class Team : public Champion{ // I don't think we need to inherit the champion object (Joseph)
 
 public:
 
@@ -16,6 +16,10 @@ public:
 	vector<string> pickedChamps(10);
 	int i = 0;
 	// there was another variable here that I can't remember.....(Joseph)
+
+	// These red squigglies can be fixed by not declaring how big these vectors are. 
+	// Then you use a constructor for the Team class and create a temp vector of the correct size and allocate the above vectors to the temp vectors. 
+	// See UserInput.h and the constructor in UserInput.cpp (Joseph)
 
 	string name;
 	bool comp = false;

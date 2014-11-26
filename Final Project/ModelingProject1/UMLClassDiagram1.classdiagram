@@ -644,14 +644,11 @@
       <class Id="36396372-80b1-4339-b2a9-f2dc042ab5cf" name="UserInput" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="1648eac3-48b0-4032-9e26-d0dcfea4dbde" />
         <ownedAttributesInternal>
-          <property Id="5fc92f5c-5762-4135-9e53-71e46eed7bd2" name="string resp;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+          <property Id="5fc92f5c-5762-4135-9e53-71e46eed7bd2" name="string resp;" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="656ae4b8-3fc5-4e9d-921b-6c0871708298" />
           </property>
-          <property Id="3265ee39-9e9d-466e-86c4-2f4c44ded722" name="Team a;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="38346663-1cd9-45f0-9ee6-f0c812d402d3" />
-          </property>
-          <property Id="34e20306-d81b-4c30-81a9-300a506f11f3" name="Team b;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-            <elementDefinition Id="e78c38c6-9c34-47d5-9f54-8666ffa1848e" />
+          <property Id="c906e38d-a96b-42eb-8076-24bef551b988" name="vector&lt;vector&lt;string&gt;&gt; outputFramework;" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5772a510-f73a-4ab8-8c41-21e32563b85c" />
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
@@ -787,12 +784,38 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="ade3985a-a111-476c-aac1-f00c9eefde48" name="draftOuput" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="ade3985a-a111-476c-aac1-f00c9eefde48" name="draftOuput" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="098aa5b4-c500-46df-b1e8-194f8d69dd88" />
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter Id="91d181b3-3ced-41bf-9cee-203e9ed7a135" direction="Return" isUnique="false">
                   <elementDefinition Id="c0f51cdf-f5da-41fb-9280-dfb809e89954" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="81f74c05-cd2f-4701-bbe4-fa3b5e1207e1" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3b4f57c7-378b-4225-8f1c-65f84f201088" name="updatebans" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1ab3c888-b24b-4481-856b-61d67565604e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="22b5b4e2-db6f-4ab9-9e96-c4b139b3764c" direction="Return" isUnique="false">
+                  <elementDefinition Id="9132e794-606d-4aee-93c0-a962550ec53f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="81f74c05-cd2f-4701-bbe4-fa3b5e1207e1" LastKnownName="void" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="bd5ad231-bc6c-43b5-a2dd-50d65cbf5505" name="updatePicks" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="100509c0-e17a-49ca-83cd-b0b11a1e274c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="80adecae-bf1b-4716-a294-0f27fcd5f6e1" direction="Return" isUnique="false">
+                  <elementDefinition Id="a86dbaae-54bd-452b-be63-391319714002" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="81f74c05-cd2f-4701-bbe4-fa3b5e1207e1" LastKnownName="void" />
                   </type_NamedElement>

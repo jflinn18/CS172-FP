@@ -2,52 +2,52 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="ChampDatabase.cpp">
-      <Filter>SourceCode</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Champion.cpp">
-      <Filter>SourceCode</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ChampionSearch.cpp">
-      <Filter>SourceCode</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
-      <Filter>SourceCode</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UserInput.cpp">
-      <Filter>SourceCode</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Draft.cpp">
-      <Filter>SourceCode</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Team.cpp">
-      <Filter>SourceCode</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChampDatabase.h">
-      <Filter>Headers</Filter>
+      <Filter>Headers Files</Filter>
     </ClInclude>
     <ClInclude Include="Champion.h">
-      <Filter>Headers</Filter>
+      <Filter>Headers Files</Filter>
     </ClInclude>
     <ClInclude Include="ChampionSearch.h">
-      <Filter>Headers</Filter>
+      <Filter>Headers Files</Filter>
     </ClInclude>
     <ClInclude Include="UserInput.h">
-      <Filter>Headers</Filter>
+      <Filter>Headers Files</Filter>
     </ClInclude>
     <ClInclude Include="Team.h">
-      <Filter>Headers</Filter>
+      <Filter>Headers Files</Filter>
     </ClInclude>
     <ClInclude Include="Draft.h">
-      <Filter>Headers</Filter>
+      <Filter>Headers Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Headers">
+    <Filter Include="Headers Files">
       <UniqueIdentifier>{f7438539-66a1-4754-ad24-fe3164a2d331}</UniqueIdentifier>
     </Filter>
-    <Filter Include="SourceCode">
+    <Filter Include="Source Files">
       <UniqueIdentifier>{fdc47d55-1e1b-41e1-bfdc-65de7e2b1ca6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>

@@ -7,25 +7,45 @@
 using namespace std;
 
 
-UserInput::UserInput(){} //default constructor
-
-UserInput::UserInput(Team blue, Team red)
+UserInput::UserInput()
 {
-	a = red;
-	b = blue;
-}
+	vector<vector<string>> temp(6);
+
+	for (int i = 0; i < 6; i++)
+		temp[i] = vector<string>(3);
+
+	temp[0][0] = "User:";
+	temp[0][1] = "Banned:";
+	temp[0][2] = "Computer:";
+
+	for (int i = 1; i < 6; i++) // each row except the first
+	{
+		for (int j = 0; j < 3; j++) // each column
+		{
+			temp[i][j] == "-----------";
+		}
+	}
+
+	draftOutputFormat = temp;
+} 
+
+//UserInput::UserInput(Team blue, Team red)
+//{
+//	a = red;
+//	b = blue;
+//}
 
 
 // asks the user which type of draft they want to do
 string UserInput::whatDraft()
 {
 	cout << "At any time, write '-man' see the different commands for this program.\n" << endl;
-	cout << "What type of draft would you like to do? ";
+	cout << "Which draft would you like to do? ";
 	getInput();
 
 	checkResp(); // checks if the user wants to do anything else than what the computer is asking
 
-	// maybe include a conditional for an option for the "learning" type of draft
+	// maybe include a conditional for an option for the "learning" type of draft (this is actually handled in checkResp)
 	
 
 	/* example of possible input: 
@@ -53,6 +73,26 @@ void UserInput::pickChamps()
 }
 
 
+// updates the banned champions in the 2D vector so that we can refresh the command line with new data
+void UserInput::updatebans(vector<string> bans)
+{
+	for (int i = 0; i < bans.size(); i++) // this reads in the banned champions from the vector that was passed in
+		draftOutputFormat[i + 1][1] == bans[i]; // i+1 becasue we want to keep the data in the first row of the vector. 
+}
+
+
+// updates the picked champions in the 2D vector so that we can refresh the command line with new data
+void UserInput::updatepicks(vector<string> user, vector<string> computer)
+{
+	for (int i = 0; i < user.size(); i++)
+		draftOutputFormat[i + 1][0] == user[i]; // updates the user column in the 2D vector
+
+	for (int i = 0; i < computer.size(); i++)
+		draftOutputFormat[i + 1][2] == computer[i]; // updates the computer column in the 2D vector
+}
+
+
+// This outputs all of the Data in that specific champion object
 void UserInput::outputChamp(Champion c)
 {
 	vector<string> bad; // makes a vector to copy data into from c
@@ -109,24 +149,46 @@ void UserInput::outputChamp(Champion c)
 void UserInput::draftOutput()
 {
 	/*
-	Computer:		  Banned:            User:
+	User:		      Banned:            Computer:
 	Kha'zix		      Lee_Sin            Rengar
 	Kennen			  Master_Yi          -----------
 	--------		  Alistar            -----------
 	--------		  Yasuo              -----------
 	--------		  Ashe               -----------
 	*/
+
+	clearWindow();
+
+	// prints out the 2D vector
+	for (int i = 0; i < 6; i++)
+	{
+		for (int j = 0; j < 3; j++) // print the first row
+		{
+			cout << setw(30) << draftOutputFormat[j][i];
+		}
+		cout << endl;
+	}
 }
 
 
-void UserInput::outputTeamPoints(string team)
+void UserInput::outputTeamPoints(Team user, Team computer)
 {
+	cout << "User's team points: " << user.getPoints();  // prints the team points for user
+	cout << "Computer's team points: " << computer.getPoints(); // prints the team points for the computer
 
+	outputWinner(user.getPoints(), computer.getPoints());
 }
 
 
-void UserInput::outputWinner(string team)
+void UserInput::outputWinner(int user, int computer)
 {
+	if (user > computer)
+		cout << "Good job! Your team has the pick advantage\n"; // the user's team has the advantage.
+	else
+	{
+		cout << "I'm sorry, the other team has the pick advantage.\n"; // the computer's team has the advantage.
+		cout << "But don't worry, your team may still win.\n";
+	}
 
 }
 
@@ -149,11 +211,14 @@ void UserInput::clearWindow()
 
 void UserInput::printMan()
 {
+	cout << "There are two types of drafts:\nComputer Draft - where the computer generates good champion counters.\n";
+	cout << "User Draft - where the user picks the counters\n";
+
 	cout << "-x: \n\t Exits the program" << endl;
 
 	cout << "-man: \n\t Shows the user manual" << endl;
 
-	cout << "-l: \n\t Used after the type of draft to choose the learning draft" << endl;
+	//cout << "-l: \n\t Used after the type of draft to choose the learning draft" << endl;
 	cout << "\t <type_of_draft> <-l>" << endl;
 }
 
@@ -165,4 +230,7 @@ void UserInput::checkResp()
 	
 	if (resp.find("-man") > 0)
 		printMan();
+
+	//if (resp.find("-l") > 0)
+		// call a special draft
 }
