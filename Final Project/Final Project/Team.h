@@ -1,34 +1,30 @@
 #ifndef _Team_h_
 #define _Team_h_
-
 #include <string>
-#include <vector>
 #include "Champion.h"
 using namespace std;
 
 
-class Team : public Champion{ // I don't think we need to inherit the champion object (Joseph)
+
+
+class Team : public Champion{ //inherits from the champion class
 
 public:
 
-	vector<string> bannedChamps(6); /* instead of allocating the number here, once someone bans a champion just call 
-									"bannedChamps.push_back(champion_name)" to add it to the vector  (Joseph) */
-	vector<string> pickedChamps(10);
-	int i = 0;
-	// there was another variable here that I can't remember.....(Joseph)
 
-	// These red squigglies can be fixed by not declaring how big these vectors are. 
-	// Then you use a constructor for the Team class and create a temp vector of the correct size and allocate the above vectors to the temp vectors. 
-	// See UserInput.h and the constructor in UserInput.cpp (Joseph)
+	vector<string> bannedChamps(6); //vector of banned champs.
+	vector<string> pickedChamps(10); //vector of picked champs.
+	
+	// Instead of allocating the number here, once someone bans a champion just call
+	// "bannedChamps.push_back(champion_name)" to add it to the vector  (Joseph)
+
+	int i = 0;
+	int c = 0;
+
 
 	string name;
 	bool comp = false;
-	Champion c1;
-	Champion c2;
-	Champion c3;
-	Champion c4;
-	Champion c5;
-
+	Champion c1, c2, c3, c4, c5;
 
 
 	int score(); //need to develope scoring techniques
@@ -38,8 +34,8 @@ public:
 
 
 
-	void banChamps();
-	void pickChamps();
+	void banChamps();// needs comp bann 
+	void pickChamps();// needs comp pick
 	void outputChamp();
 	void outputTeamPoints();
 	void outputWinner();
