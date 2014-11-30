@@ -26,6 +26,9 @@ public:
 	ChampDatabase();
 	void completeADraft();
 	Champion getChamp(string&);
+
+	vector<Champion> getChamps();
+	vector<string> getList();
 	
 	
 };

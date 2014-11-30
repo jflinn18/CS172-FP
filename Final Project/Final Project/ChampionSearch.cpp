@@ -22,5 +22,7 @@ int ChampionSearch::search(string &name)
 	{
 		if (_champs[0] == name)
 			return i; // returns the index of where the champion can be found. 
+		else
+			return -1; // to say that it was not found
 	}
 }

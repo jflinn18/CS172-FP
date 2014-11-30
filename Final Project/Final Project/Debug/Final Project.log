@@ -1,0 +1,135 @@
+﻿Build started 11/30/2014 12:04:19 PM.
+     1>Project "C:\Users\Joseph\Documents\GitHub\CS172-FP\Final Project\Final Project\Final Project.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         E:\Programs\Visual Studios 13\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ChampDatabase.cpp Champion.cpp ChampionSearch.cpp Draft.cpp Main.cpp Team.cpp TxtFileProof.cpp UserInput.cpp
+         UserInput.cpp
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.h(15): error C2059: syntax error : 'constant'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.h(16): error C2059: syntax error : 'constant'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(79): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(87): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(90): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(111): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(113): warning C4018: '>' : signed/unsigned mismatch
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(121): warning C4018: '>' : signed/unsigned mismatch
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(123): warning C4018: '>' : signed/unsigned mismatch
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(131): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(136): error C3867: 'Champion::getPrimaryRole': function call missing argument list; use '&Champion::getPrimaryRole' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(138): error C3867: 'Champion::getSecondaryRole': function call missing argument list; use '&Champion::getSecondaryRole' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(138): error C2446: '==' : no conversion from 'const char *' to 'std::string (__thiscall Champion::* )(void)'
+                 There is no context in which this conversion is possible
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(138): error C2040: '==' : 'std::string (__thiscall Champion::* )(void)' differs in levels of indirection from 'const char [3]'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(143): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(176): error C2039: 'getPoints' : is not a member of 'Team'
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\team.h(10) : see declaration of 'Team'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(177): error C2039: 'getPoints' : is not a member of 'Team'
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\team.h(10) : see declaration of 'Team'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(179): error C2039: 'getPoints' : is not a member of 'Team'
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\team.h(10) : see declaration of 'Team'
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\team.h(10) : see declaration of 'Team'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(179): error C2660: 'UserInput::outputWinner' : function does not take 1 arguments
+         TxtFileProof.cpp
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14): error C2011: 'ChampionSearch' : 'class' type redefinition
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\txtfileproof.h(17): error C2079: 'TxtFileProof::_cs' uses undefined class 'ChampionSearch'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\txtfileproof.cpp(16): error C2079: 'cs' uses undefined class 'ChampionSearch'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\txtfileproof.cpp(16): error C2440: 'initializing' : cannot convert from 'std::vector<std::string,std::allocator<_Ty>>' to 'int'
+                 with
+                 [
+                     _Ty=std::string
+                 ]
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\txtfileproof.cpp(33): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\txtfileproof.cpp(58): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\txtfileproof.cpp(60): error C2228: left of '.search' must have class/struct/union
+                 type is 'int'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\txtfileproof.cpp(78): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\txtfileproof.cpp(80): error C2228: left of '.search' must have class/struct/union
+                 type is 'int'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\txtfileproof.cpp(98): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\txtfileproof.cpp(121): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\txtfileproof.cpp(123): error C2228: left of '.search' must have class/struct/union
+                 type is 'int'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\txtfileproof.cpp(157): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\txtfileproof.cpp(164): fatal error C1075: end of file found before the left brace '{' at 'c:\users\joseph\documents\github\cs172-fp\final project\final project\txtfileproof.cpp(156)' was matched
+         Team.cpp
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.h(15): error C2059: syntax error : 'constant'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.h(16): error C2059: syntax error : 'constant'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(25): error C3867: 'Team::bannedChamps': function call missing argument list; use '&Team::bannedChamps' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(25): error C2109: subscript requires array or pointer type
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(27): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::clear': function call missing argument list; use '&std::basic_string<char,std::char_traits<char>,std::allocator<char>>::clear' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(32): warning C4258: 'i' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(24) : definition of 'i' ignored
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\team.h(21) : definition of 'Team::i' used
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(32): error C3867: 'Team::bannedChamps': function call missing argument list; use '&Team::bannedChamps' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(32): error C2109: subscript requires array or pointer type
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(33): warning C4258: 'i' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(24) : definition of 'i' ignored
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\team.h(21) : definition of 'Team::i' used
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(54): error C3867: 'Team::pickedChamps': function call missing argument list; use '&Team::pickedChamps' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(54): error C2109: subscript requires array or pointer type
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(56): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::clear': function call missing argument list; use '&std::basic_string<char,std::char_traits<char>,std::allocator<char>>::clear' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(60): warning C4258: 'i' : definition from the for loop is ignored; the definition from the enclosing scope is used
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(53) : definition of 'i' ignored
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\team.h(21) : definition of 'Team::i' used
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(60): error C3867: 'Team::pickedChamps': function call missing argument list; use '&Team::pickedChamps' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(60): error C2109: subscript requires array or pointer type
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(94): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'void' (or there is no acceptable conversion)
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\champion.h(34): could be 'Champion &Champion::operator =(const Champion &)'
+                 while trying to match the argument list '(Champion, void)'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(96): error C3867: 'Team::pickChamps': function call missing argument list; use '&Team::pickChamps' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(96): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'overloaded-function' (or there is no acceptable conversion)
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\champion.h(34): could be 'Champion &Champion::operator =(const Champion &)'
+                 while trying to match the argument list '(Champion, overloaded-function)'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(97): error C3867: 'Team::pickChamps': function call missing argument list; use '&Team::pickChamps' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(97): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'overloaded-function' (or there is no acceptable conversion)
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\champion.h(34): could be 'Champion &Champion::operator =(const Champion &)'
+                 while trying to match the argument list '(Champion, overloaded-function)'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(99): error C3867: 'Team::pickChamps': function call missing argument list; use '&Team::pickChamps' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(99): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'overloaded-function' (or there is no acceptable conversion)
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\champion.h(34): could be 'Champion &Champion::operator =(const Champion &)'
+                 while trying to match the argument list '(Champion, overloaded-function)'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(100): error C3867: 'Team::pickChamps': function call missing argument list; use '&Team::pickChamps' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(100): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'overloaded-function' (or there is no acceptable conversion)
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\champion.h(34): could be 'Champion &Champion::operator =(const Champion &)'
+                 while trying to match the argument list '(Champion, overloaded-function)'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(102): error C3867: 'Team::pickChamps': function call missing argument list; use '&Team::pickChamps' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(102): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'overloaded-function' (or there is no acceptable conversion)
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\champion.h(34): could be 'Champion &Champion::operator =(const Champion &)'
+                 while trying to match the argument list '(Champion, overloaded-function)'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(103): error C3867: 'Team::pickChamps': function call missing argument list; use '&Team::pickChamps' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(103): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'overloaded-function' (or there is no acceptable conversion)
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\champion.h(34): could be 'Champion &Champion::operator =(const Champion &)'
+                 while trying to match the argument list '(Champion, overloaded-function)'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(105): error C3867: 'Team::pickChamps': function call missing argument list; use '&Team::pickChamps' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(105): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'overloaded-function' (or there is no acceptable conversion)
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\champion.h(34): could be 'Champion &Champion::operator =(const Champion &)'
+                 while trying to match the argument list '(Champion, overloaded-function)'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(106): error C3867: 'Team::pickChamps': function call missing argument list; use '&Team::pickChamps' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(106): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'overloaded-function' (or there is no acceptable conversion)
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\champion.h(34): could be 'Champion &Champion::operator =(const Champion &)'
+                 while trying to match the argument list '(Champion, overloaded-function)'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(108): error C3867: 'Team::pickChamps': function call missing argument list; use '&Team::pickChamps' to create a pointer to member
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\team.cpp(108): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'overloaded-function' (or there is no acceptable conversion)
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\champion.h(34): could be 'Champion &Champion::operator =(const Champion &)'
+                 while trying to match the argument list '(Champion, overloaded-function)'
+         Main.cpp
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14): error C2011: 'ChampionSearch' : 'class' type redefinition
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\txtfileproof.h(17): error C2079: 'TxtFileProof::_cs' uses undefined class 'ChampionSearch'
+         Draft.cpp
+         ChampionSearch.cpp
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.cpp(21): warning C4018: '<' : signed/unsigned mismatch
+         Champion.cpp
+         ChampDatabase.cpp
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14): error C2011: 'ChampionSearch' : 'class' type redefinition
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\champdatabase.cpp(14): error C2027: use of undefined type 'ChampionSearch'
+                 c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\champdatabase.cpp(14): fatal error C1903: unable to recover from previous error(s); stopping compilation
+         Generating Code...
+     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.cpp(28): warning C4715: 'ChampionSearch::search' : not all control paths return a value
+     1>Done Building Project "C:\Users\Joseph\Documents\GitHub\CS172-FP\Final Project\Final Project\Final Project.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:03.40

@@ -131,3 +131,7 @@ void ChampDatabase::setChampSearch()
 	ChampionSearch cs(_listOfChampNames);
 	champSearch = cs;
 }
+
+
+vector<Champion> ChampDatabase::getChamps() { return _champs; }
+vector<string> ChampDatabase::getList() { return _listOfChampNames; }
