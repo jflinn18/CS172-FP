@@ -1,19 +1,24 @@
 #ifndef _Draft_h_
 #define _Draft_h_
+
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include "Team.h"
+#include "UserInput.h"
 using namespace std;
-
-
-
 
 
 
 class Draft
 {
 private:
-	Team blue; // maybe Team user and Team computer
-	Team red;
-	UserInput ui;
-
+	Team _user; // maybe Team user and Team computer
+	Team _computer;
+	UserInput _ui;
+	vector<string> pickedChamps; // this stores all of the champions picked so far in the draft (for both sides)
+	vector<string> bannedChamps; //vector of all banned champs.
 
 public:
 	Draft(vector<string> champs);
@@ -21,6 +26,11 @@ public:
 	Constructor for the draft object.  I would be calling this function from
 	the ChampDatabase class.
 	*/
+
+	void addpickedChamps(string&);
+	void addbannedChamps(string&);
+	vector<string> getpickedChamps();
+	vector<string> getbannedChamps();
 
 	void examineUserInput();
 	/*
@@ -123,11 +133,20 @@ public:
 	during that turn. Again, another morning dream coding session :)  (12/2)
 	*/
 
+	void banChamps();// needs comp bann 
+	void pickChamps();// needs comp pick
+
+	void computerBan();
+	void userBan();
+
+
 	int whoseTurn();
 	/*
 	This was really to go hand in hand with the above function.  Without that function
 	it really isn't needed.
 	*/
+
+	int score(); //need to develope scoring techniques
 };
 
 

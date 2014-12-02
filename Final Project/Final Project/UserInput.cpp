@@ -29,11 +29,11 @@ UserInput::UserInput()
 	draftOutputFormat = temp;
 } 
 
-//UserInput::UserInput(Team blue, Team red)
-//{
-//	a = red;
-//	b = blue;
-//}
+
+void UserInput::setUI(UserInput ui)
+{
+	draftOutputFormat = ui.getDraftOutputFormat;
+}
 
 
 // asks the user which type of draft they want to do
@@ -233,4 +233,10 @@ void UserInput::checkResp()
 
 	//if (resp.find("-l") > 0)
 		// call a special draft
+}
+
+
+vector<vector<string>> UserInput::getDraftOutputFormat()
+{
+	return draftOutputFormat;
 }

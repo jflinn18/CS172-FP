@@ -11,6 +11,7 @@ private:
 	Team blue; // maybe Team user and Team computer
 	Team red;
 	UserInput ui;
+	
 
 public:
 	Draft(vector<string> champs); 

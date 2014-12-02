@@ -25,8 +25,10 @@ private:
 public:
 	UserInput();
 	//UserInput(Team, Team);
+	void setUI(UserInput);
 	string whatDraft();
 	string getInput();
+	vector<vector<string>> getDraftOutputFormat();
 
 	void banChamps();
 	void pickChamps();
