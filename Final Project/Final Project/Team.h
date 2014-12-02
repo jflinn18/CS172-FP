@@ -49,6 +49,37 @@ public:
 
 };
 
+class Team // I don't think it would need to have inheritance with the Champion class
+{
+private:
+	int points;
+	vector<string> teamChampNames;
+
+public:
+	void addTeamChampNames(string);
+	/*
+	This would "push_back" the teamChampNames with whatever the function's
+	parameter is.
+	*/
+
+	int getPoints();
+	/*
+	This would return the points member.
+	*/
+
+	vector<string> getTeamChampNames();
+	/*
+	This would return the whole vector of champ names that that team has.
+	*/
+
+	void setPoints();
+	/*
+	This could also be an "addPoints()" function that adds 1 to whatever points is
+	when this function is called.
+	*/
+};
+
+
 
 
 #endif
