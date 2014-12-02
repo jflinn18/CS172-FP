@@ -1,4 +1,7 @@
-WARNING: This just kind of kept growing and growing and growing.  Sorry for the length of the document.  These are just ideas.  I did write in a c++ friendly syntax.  If you really want to, you could just copy and paste this into the header files.  But you might want to do it all yourself.  That is completely fine.  I did it this way for options. 
+WARNING: This just kind of kept growing and growing and growing.  Sorry for the length 
+of the document.  These are just ideas.  I did write in a c++ friendly syntax.  If you 
+really want to, you could just copy and paste this into the header files.  But you might 
+want to do it all yourself.  That is completely fine.  I did it this way for options. 
 
 
 
@@ -19,7 +22,8 @@ public:
 	void examineUserInput();
 	/*
 	This function would examine the string that is returned from ui.getInput().
-	I really don't know what I was thinking when I wrote this.  You could probably 		hard code what this would do when you call the ui.getInput() function
+	I really don't know what I was thinking when I wrote this.  You could probably 	
+	hard code what this would do when you call the ui.getInput() function
 	*/
 
 	void executeDraft();
@@ -93,7 +97,8 @@ public:
 	---------           -------           -----
 
 	And then when you go through the turns, you could use a for loop to place both 
-	Team's vector<string> teamChampNames and the banned champs into there designated 		columns and then pass that 2D vector into the ui.draftOutput function.  Or....you 		
+	Team's vector<string> teamChampNames and the banned champs into there designated 	
+	columns and then pass that 2D vector into the ui.draftOutput function.  Or....you 		
 	could pass in the three above mentioned 1D vectors and I could do what I just said 
 	in the draftOutput function.  This is how I'm going to code it for now. 
 
@@ -105,6 +110,14 @@ public:
 
 	If, however, you decide to 2D vector and pass it in to me, you might consider
 	using a variable in the public section in the Draft header file for the 2D vector. 
+
+	
+
+	More on this topic.  You might want to think about creating a function for a user 
+	pick and a computer pick.  All that function will do is what it takes for a user 
+	or computer to pick one champion.  Then in the take a turn function, you could call
+	the pick functions once or twice depending on how many champions they get to pick 
+	during that turn. Again, another morning dream coding session :)  (12/2)
 	*/
 
 	int whoseTurn();
