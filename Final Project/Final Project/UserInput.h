@@ -24,8 +24,6 @@ private:
 
 public:
 	UserInput();
-	//UserInput(Team, Team);
-	void setUI(UserInput);
 	string whatDraft();
 	string getInput();
 	vector<vector<string>> getDraftOutputFormat();
@@ -34,12 +32,15 @@ public:
 	void pickChamps();
 	void outputChamp(Champion);
 	void outputTeamPoints(Team, Team);
+	void checkBanned();
+	void checkPicked();
 	
 	void updatebans(vector<string>);
 	void updatepicks(vector<string>, vector<string>);
 
 	void printMan();
 	void clearWindow();
+	
 };
 
 #endif

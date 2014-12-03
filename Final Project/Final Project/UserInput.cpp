@@ -7,6 +7,8 @@
 using namespace std;
 
 
+
+
 UserInput::UserInput()
 {
 	vector<vector<string>> temp(6);
@@ -29,11 +31,14 @@ UserInput::UserInput()
 	draftOutputFormat = temp;
 } 
 
+void UserInput::checkBanned(){
+	cout << "Champion already banned. Ban a different champ: ";
 
-void UserInput::setUI(UserInput ui)
-{
-	draftOutputFormat = ui.getDraftOutputFormat;
 }
+void UserInput::checkPicked(){
+	cout << "Champion already picked. Pick a different champ: ";
+}
+
 
 
 // asks the user which type of draft they want to do

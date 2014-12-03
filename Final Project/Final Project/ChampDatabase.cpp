@@ -26,7 +26,7 @@ void ChampDatabase::completeADraft()
 
 
 	// Call the constructor for a draft class that will iterate through one draft.
-
+	//call constructor for they type of draft from ui.
 	/*Draft d;
 
 	// add the arguments that the constructor calls for.
