@@ -7,9 +7,6 @@
 #include <string>
 #include "Champion.h"
 #include "Team.h"
-#include "CompDraft.h"
-#include "UserDraft.h"
-
 
 using namespace std;
 

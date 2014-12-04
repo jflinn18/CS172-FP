@@ -2,7 +2,6 @@
 #include <string>
 #include <vector>
 #include "ChampDatabase.h"
-#include "TxtFileProof.h"
 
 using namespace std;
 

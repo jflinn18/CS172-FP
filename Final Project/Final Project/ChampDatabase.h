@@ -8,6 +8,8 @@
 #include "Champion.h"
 #include "ChampionSearch.h"
 #include "UserInput.h"
+#include "CompDraft.h"
+#include "UserDraft.h"
 
 using namespace std;
 
