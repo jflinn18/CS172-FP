@@ -1,5 +1,5 @@
-#ifndef _Draft_h_
-#define _Draft_h_
+#ifndef _Draft_h
+#define _Draft_h
 
 
 #include <iostream>
