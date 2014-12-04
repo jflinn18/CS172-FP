@@ -5,8 +5,11 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <ctime>
+#include <cstdlib>
 #include "Team.h"
 #include "UserInput.h"
+#include "ChampionSearch.h"
 using namespace std;
 
 
@@ -21,6 +24,7 @@ private:
 	vector<string> bannedChamps; //vector of all banned champs.
 	vector<Champion> _champs;
 	vector<string> _listChampNames;
+	ChampionSearch *_champSearch;
 public:
 	Draft(vector<string>, vector<Champion>);
 	/*
@@ -35,18 +39,19 @@ public:
 	void executeDraft();
 	Champion generateChamp();
 	string getChampName();
-	void setChampName(string);
+	void setChampName(string&);
 	void takeTurn();
-	void banChamps();// needs comp bann 
-	void pickChamps();// needs comp pick
+	virtual void banChamps();// needs comp bann 
+	virtual void pickChamps();// needs comp pick
 
 	void compBan();
 	void userBan();
 	void userPick();
-	void compPick();
+	void compPick(int);
 	bool checkPick(string&);
 	bool checkBan(string&);
-	bool checkPos(string&); //need for compPick. check that the champ fulfills a certain position.
+	//bool checkPos(string&); //need for compPick. check that the champ fulfills a certain position.
+	string compChampPick(int&);
 	
 
 	int whoseTurn();

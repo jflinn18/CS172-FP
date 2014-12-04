@@ -24,6 +24,8 @@ void ChampDatabase::completeADraft()
 	createChampList(); // calls the function that creates the list of names for the champions
 	createChamps(); // call the funtion that creates the vector of champion objects
 
+	
+
 
 	// Call the constructor for a draft class that will iterate through one draft.
 	//call constructor for they type of draft from ui.

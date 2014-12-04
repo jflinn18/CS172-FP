@@ -22,6 +22,12 @@
     <ClCompile Include="Team.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="UserDraft.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CompDraft.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChampDatabase.h">
@@ -42,10 +48,10 @@
     <ClInclude Include="Draft.h">
       <Filter>Headers Files</Filter>
     </ClInclude>
-    <ClInclude Include="DraftAgainstComp.h">
+    <ClInclude Include="UserDraft.h">
       <Filter>Headers Files</Filter>
     </ClInclude>
-    <ClInclude Include="ComputerSim.h">
+    <ClInclude Include="CompDraft.h">
       <Filter>Headers Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -79,19 +79,21 @@
     <ClCompile Include="ChampDatabase.cpp" />
     <ClCompile Include="Champion.cpp" />
     <ClCompile Include="ChampionSearch.cpp" />
+    <ClCompile Include="CompDraft.cpp" />
     <ClCompile Include="Draft.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Team.cpp" />
+    <ClCompile Include="UserDraft.cpp" />
     <ClCompile Include="UserInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChampDatabase.h" />
     <ClInclude Include="Champion.h" />
     <ClInclude Include="ChampionSearch.h" />
-    <ClInclude Include="ComputerSim.h" />
+    <ClInclude Include="CompDraft.h" />
     <ClInclude Include="Draft.h" />
-    <ClInclude Include="DraftAgainstComp.h" />
     <ClInclude Include="Team.h" />
+    <ClInclude Include="UserDraft.h" />
     <ClInclude Include="UserInput.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

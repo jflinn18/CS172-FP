@@ -16,7 +16,7 @@ class ChampDatabase
 private: 
 	vector<Champion> _champs;
 	vector<string> _listOfChampNames;
-	ChampionSearch champSearch;
+	ChampionSearch champSearch; // make it into a pointer
 	void setChampSearch();
 	void addChamp(string&);
 	void createChampList();

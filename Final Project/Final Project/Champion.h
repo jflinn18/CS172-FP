@@ -24,6 +24,7 @@ public:
 	string getPrimaryRole();
 	string getSecondaryRole();
 	string getName();
+	string getGoodChamp(int);
 	
 	void setBadCounter(string);
 	void setGoodCounter(string);

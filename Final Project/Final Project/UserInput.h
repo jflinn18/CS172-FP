@@ -2,6 +2,7 @@
 #define _UserInput_h
 
 #include <iostream>
+#include <iomanip>
 #include "Champion.h"
 #include "Team.h"
 #include <string>

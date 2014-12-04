@@ -11,6 +11,7 @@ vector<string> Champion::getGoodCounter(){ return _goodCounter; } // returns a l
 string Champion::getPrimaryRole() { return _primaryRole; } // returns the primary role 
 string Champion::getSecondaryRole() { return _secondaryRole; } // returns the secondary role
 string Champion::getName() { return _name; } // returns the name of the champion
+string Champion::getGoodChamp(int i) { return _goodCounter[i]; }
 
 
 
