@@ -4,10 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Team.h"
 #include "Draft.h"
-#include "UserInput.h"
-#include "ChampionSearch.h"
 
 using namespace std;
 

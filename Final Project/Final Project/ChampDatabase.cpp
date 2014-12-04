@@ -7,8 +7,14 @@ using namespace std;
 ChampDatabase::ChampDatabase()
 {
 	// calls the function that will go through a draft.
-	completeADraft();
 	_ui = new UserInput;
+	createChampList(); // calls the function that creates the list of names for the champion
+
+	champSearch = new ChampionSearch(_listOfChampNames);
+
+	createChamps(); // call the funtion that creates the vector of champion objects
+	completeADraft();
+	
 }
 
 
@@ -19,18 +25,13 @@ ChampDatabase::~ChampDatabase()
 }
 
 
-// this function completes one interation of a draft. 
+// this function completes one iteration of a draft. 
 void ChampDatabase::completeADraft()
 {
-	createChampList(); // calls the function that creates the list of names for the champions
-	createChamps(); // call the funtion that creates the vector of champion objects
-	setChampSearch(); // calls the function that initializes the ChampionSearch Object member
-
 	string resp = _ui->whatDraft();
 
 	allocateDraft(resp);
 	
-
 
 	// Call the constructor for a draft class that will iterate through one draft.
 	//call constructor for the type of draft from ui.
@@ -139,7 +140,7 @@ void ChampDatabase::createChampList()
 // creates the vector of champion objects
 void ChampDatabase::createChamps()
 {
-	for (int i = 0; i < _listOfChampNames.size(); i++)
+	for (unsigned int i = 0; i < _listOfChampNames.size(); i++)
 		addChamp(_listOfChampNames[0]); // adds one champion object for each champion in the listOfChampNames vector
 }
 
