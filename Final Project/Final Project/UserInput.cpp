@@ -46,14 +46,16 @@ string UserInput::whatDraft()
 
 	checkResp(); // checks if the user wants to do anything else than what the computer is asking
 
-	// maybe include a conditional for an option for the "learning" type of draft (this is actually handled in checkResp)
+	return resp;
+
+
 	
 
 	/* example of possible input: 
 			
 			Computer Draft
 			User Draft
-			User Draft -l
+			//User Draft -l
 
 
 	*/
@@ -241,3 +243,5 @@ vector<vector<string>> UserInput::getDraftOutputFormat()
 {
 	return draftOutputFormat;
 }
+
+void UserInput::draftInputError() { cout << "You have not selected a draft.\n"; }

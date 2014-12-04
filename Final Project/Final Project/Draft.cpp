@@ -1,6 +1,7 @@
 #include "Draft.h"
 
 
+
 Draft::Draft(vector<string> listchamps, vector<Champion> champs)
 {
 	srand(time(NULL));
@@ -176,4 +177,4 @@ int Draft::score(){
 		}
 	}
 
-} //need to develope scoring techniques
+}

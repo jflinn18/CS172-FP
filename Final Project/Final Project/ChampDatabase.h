@@ -7,6 +7,7 @@
 #include <vector>
 #include "Champion.h"
 #include "ChampionSearch.h"
+#include "UserInput.h"
 
 using namespace std;
 
@@ -16,11 +17,15 @@ class ChampDatabase
 private: 
 	vector<Champion> _champs;
 	vector<string> _listOfChampNames;
-	ChampionSearch champSearch; // make it into a pointer
+	ChampionSearch *champSearch; 
+	UserInput *_ui;
+	CompDraft *_cd;
+	UserDraft *_ud;
 	void setChampSearch();
 	void addChamp(string&);
 	void createChampList();
 	void createChamps();
+	void allocateDraft(string&);
 
 public:
 	ChampDatabase();

@@ -1,10 +1,4 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include <fstream>
 #include "ChampDatabase.h"
-#include "Champion.h"
-#include "ChampionSearch.h"
 
 using namespace std;
 
@@ -14,25 +8,43 @@ ChampDatabase::ChampDatabase()
 {
 	// calls the function that will go through a draft.
 	completeADraft();
+	_ui = new UserInput;
 }
 
 
 // this function completes one interation of a draft. 
 void ChampDatabase::completeADraft()
 {
-	setChampSearch(); // calls the function that initializes the ChampionSearch Object member
 	createChampList(); // calls the function that creates the list of names for the champions
 	createChamps(); // call the funtion that creates the vector of champion objects
+	setChampSearch(); // calls the function that initializes the ChampionSearch Object member
 
+	string resp = _ui->whatDraft();
+
+	delete champSearch;
+	delete _ui;
+
+	allocateDraft(resp);
 	
 
 
 	// Call the constructor for a draft class that will iterate through one draft.
-	//call constructor for they type of draft from ui.
+	//call constructor for the type of draft from ui.
 	/*Draft d;
 
 	// add the arguments that the constructor calls for.
 	d();*/
+}
+
+
+void ChampDatabase::allocateDraft(string& resp)
+{
+	if (resp == "Computer Draft" || resp == "computer draft")
+		_cd = new CompDraft(_listOfChampNames, _champs);
+	if (resp == "User Draft" || resp == "user draft")
+		_ud = new UserDraft(_listOfChampNames, _champs);
+	else
+		_ui->draftInputError();
 }
 
 
@@ -92,7 +104,7 @@ void ChampDatabase::addChamp(string &champName)
 Champion ChampDatabase::getChamp(string &champ)
 {
 	// searches for the champion and returns that champion
-	return _champs[champSearch.search(champ)];
+	return _champs[champSearch->search(champ)];
 }
 
 
@@ -130,8 +142,7 @@ void ChampDatabase::createChamps()
 
 void ChampDatabase::setChampSearch()
 {
-	ChampionSearch cs(_listOfChampNames);
-	champSearch = cs;
+	champSearch = new ChampionSearch(_listOfChampNames);
 }
 
 
