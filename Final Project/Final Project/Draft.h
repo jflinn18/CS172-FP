@@ -27,6 +27,7 @@ private:
 	ChampionSearch *_champSearch;
 public:
 	Draft(vector<string>, vector<Champion>);
+	~Draft();
 	/*
 	Constructor for the draft object.  I would be calling this function from
 	the ChampDatabase class.
@@ -52,12 +53,10 @@ public:
 	bool checkBan(string&);
 	//bool checkPos(string&); //need for compPick. check that the champ fulfills a certain position.
 	string compChampPick(int&);
+
 	
 
-	int whoseTurn();
-	
-
-	int score(); //need to develope scoring techniques
+	void score(); //need to develope scoring techniques
 };
 
 

@@ -22,14 +22,6 @@
         <classMoniker Id="51ffc412-08ed-40c4-96d6-6a9844a89ca8" LastKnownName="ChampionSearch" />
       </annotatedElements>
     </comment>
-    <comment Id="c9118b88-1aef-4d25-b477-53e8cdf78d49">
-      <elementDefinition Id="071cda26-5eca-46e0-9895-8e162a51c50f" />
-      <body>takeTurn() is different in each. In one, the computer goes first. In the other, the user goes first. They overload the function in the base class</body>
-      <annotatedElements>
-        <classMoniker Id="5c50de13-b549-42d5-a9db-2f0559880a9e" LastKnownName="DraftAgainstComp" />
-        <classMoniker Id="29604e03-5e90-4f92-8022-76c6d17a0e27" LastKnownName="ComputerSimulation" />
-      </annotatedElements>
-    </comment>
   </ownedCommentsInternal>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>

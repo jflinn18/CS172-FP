@@ -79,7 +79,7 @@ void UserInput::pickChamps()
 // updates the banned champions in the 2D vector so that we can refresh the command line with new data
 void UserInput::updatebans(vector<string> bans)
 {
-	for (int i = 0; i < bans.size(); i++) // this reads in the banned champions from the vector that was passed in
+	for (unsigned int i = 0; i < bans.size(); i++) // this reads in the banned champions from the vector that was passed in
 		draftOutputFormat[i + 1][1] == bans[i]; // i+1 becasue we want to keep the data in the first row of the vector. 
 }
 
@@ -87,10 +87,10 @@ void UserInput::updatebans(vector<string> bans)
 // updates the picked champions in the 2D vector so that we can refresh the command line with new data
 void UserInput::updatepicks(vector<string> user, vector<string> computer)
 {
-	for (int i = 0; i < user.size(); i++)
+	for (unsigned int i = 0; i < user.size(); i++)
 		draftOutputFormat[i + 1][0] == user[i]; // updates the user column in the 2D vector
 
-	for (int i = 0; i < computer.size(); i++)
+	for (unsigned int i = 0; i < computer.size(); i++)
 		draftOutputFormat[i + 1][2] == computer[i]; // updates the computer column in the 2D vector
 }
 
@@ -111,7 +111,7 @@ void UserInput::outputChamp(Champion c)
 
 	if (bad.size() > good.size()) // conditional to make sure you won't run outside of the vector
 	{
-		for (int i = 0; i < bad.size(); i++)
+		for (unsigned int i = 0; i < bad.size(); i++)
 		{
 			if (i > good.size())
 				cout << setw(30) << bad[i] << endl; // formats output
@@ -121,7 +121,7 @@ void UserInput::outputChamp(Champion c)
 	}
 	else if (bad.size() < good.size()) // conditional to make sure you won't run outside of the vector
 	{
-		for (int i = 0; i > good.size(); i++)
+		for (unsigned int i = 0; i > good.size(); i++)
 		{
 			if (i > bad.size())
 				cout << setw(60) << good[i] << endl; // formats output
@@ -131,19 +131,19 @@ void UserInput::outputChamp(Champion c)
 	}
 	else
 	{
-		for (int i = 0; i < bad.size(); i++)
+		for (unsigned int i = 0; i < bad.size(); i++)
 			cout << setw(30) << bad[i] << setw(30) << good[i]; // formats output
 	}
 
 
-	cout << "\nPrimary Role: " << c.getPrimaryRole << endl; // prints out the primary role of the champion
+	cout << "\nPrimary Role: " << c.getPrimaryRole() << endl; // prints out the primary role of the champion
 
-	if (!(c.getSecondaryRole == "na"))
+	if (!(c.getSecondaryRole() == "na"))
 		cout << "Secondary Role: " << c.getSecondaryRole() << endl; // prints out the secondary role of the champion if it has one
 
 	cout << endl; // asthetics
 
-	for (int i = 0; i < pos.size(); i++)
+	for (unsigned int i = 0; i < pos.size(); i++)
 		cout << pos[i] << endl; // prints out the positions of the champion
 }
 

@@ -12,6 +12,13 @@ ChampDatabase::ChampDatabase()
 }
 
 
+ChampDatabase::~ChampDatabase()
+{
+	delete champSearch;
+	delete _ui;
+}
+
+
 // this function completes one interation of a draft. 
 void ChampDatabase::completeADraft()
 {
@@ -20,9 +27,6 @@ void ChampDatabase::completeADraft()
 	setChampSearch(); // calls the function that initializes the ChampionSearch Object member
 
 	string resp = _ui->whatDraft();
-
-	delete champSearch;
-	delete _ui;
 
 	allocateDraft(resp);
 	

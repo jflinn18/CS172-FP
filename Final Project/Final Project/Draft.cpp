@@ -13,6 +13,11 @@ Draft::Draft(vector<string> listchamps, vector<Champion> champs)
 	executeDraft();
 }
 
+Draft::~Draft()
+{
+	delete _champSearch;
+}
+
 
 void Draft::addpickedChamps(string &champ) { pickedChamps.push_back(champ); }
 void Draft::addbannedChamps(string &champ) { bannedChamps.push_back(champ); }
@@ -51,20 +56,23 @@ void Draft::userBan()
 }
 
 bool Draft::checkBan(string& ban){
-	for (int i = 0; i < bannedChamps.size(); i++){ //checks that the champion hasn't been banned already.
+	for (unsigned int i = 0; i < bannedChamps.size(); i++){ //checks that the champion hasn't been banned already.
 
 		if (bannedChamps[i] == ban){
 			return false;
 		}
+		else
+			return true;
 	}
 }
 
 bool Draft::checkPick(string& pick){
-	for (int i = 0; i < pickedChamps.size(); i++){ //checks that the champion hasn't been picked already.
+	for (unsigned int i = 0; i < pickedChamps.size(); i++){ //checks that the champion hasn't been picked already.
 
 		if (pickedChamps[i] == pick){
 			return false;
 		}
+		else return true;
 	}
 }
 
@@ -84,7 +92,7 @@ void Draft::userPick(){
 	}
 	addpickedChamps(picked);
 	_user.addTeamChampNames(picked);
-	_ui.updatepicks(_user.getTeamChampNames, _computer.getTeamChampNames);
+	_ui.updatepicks(_user.getTeamChampNames(), _computer.getTeamChampNames());
 }
 
 
@@ -102,7 +110,7 @@ void Draft::compPick(int i){
 
 	addpickedChamps(picked);
 	_computer.addTeamChampNames(picked);
-	_ui.updatepicks(_user.getTeamChampNames, _computer.getTeamChampNames);
+	_ui.updatepicks(_user.getTeamChampNames(), _computer.getTeamChampNames());
 }
 
 
@@ -116,9 +124,9 @@ string Draft::compChampPick(int& i)
 
 		c = _champs[index];
 
-		int r = rand() % c.getGoodCounter.size();
+		int r = rand() % c.getGoodCounter().size();
 
-		return c.getGoodCounter[r];
+		return c.getGoodChamp(r);
 		// check if they have been picked or banned???
 	}
 	else
@@ -133,23 +141,21 @@ void Draft::executeDraft(){
 	banChamps();
 	pickChamps();
 	score();
-
-	delete _champSearch;
 }
 
 
-int Draft::score(){
+void Draft::score(){
 	Champion temp;
 	int index;
 
-	for (int i = 0; i < _user.getTeamChampNames().size(); i++)
+	for (unsigned int i = 0; i < _user.getTeamChampNames().size(); i++)
 	{
-		for (int j = 0; j < _computer.getTeamChampNames().size(); j++)
+		for (unsigned int j = 0; j < _computer.getTeamChampNames().size(); j++)
 		{
 			index = _champSearch->search(_computer.getChamp(j));
 
 			temp = _champs[index];
-			for (int k = 0; k < temp.getGoodCounter().size(); k++)
+			for (unsigned int k = 0; k < temp.getGoodCounter().size(); k++)
 			{
 				if (_user.getChamp(j) == temp.getGoodChamp(k))
 				{
@@ -160,14 +166,14 @@ int Draft::score(){
 	}
 
 
-	for (int i = 0; i < _computer.getTeamChampNames().size(); i++)
+	for (unsigned int i = 0; i < _computer.getTeamChampNames().size(); i++)
 	{
-		for (int j = 0; j < _user.getTeamChampNames().size(); j++)
+		for (unsigned int j = 0; j < _user.getTeamChampNames().size(); j++)
 		{
 			index = _champSearch->search(_user.getChamp(j));
 
 			temp = _champs[index];
-			for (int k = 0; k < temp.getGoodCounter().size(); k++)
+			for (unsigned int k = 0; k < temp.getGoodCounter().size(); k++)
 			{
 				if (_computer.getChamp(j) == temp.getGoodChamp(k))
 				{

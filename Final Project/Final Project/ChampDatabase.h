@@ -31,6 +31,7 @@ private:
 
 public:
 	ChampDatabase();
+	~ChampDatabase();
 	void completeADraft();
 	Champion getChamp(string&);
 

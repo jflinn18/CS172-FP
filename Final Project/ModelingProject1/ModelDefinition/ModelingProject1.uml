@@ -34,20 +34,6 @@
           LastKnownLocation="ModelingProject1.uml" />
       </annotatedElements>
     </comment>
-    <comment
-      Id="071cda26-5eca-46e0-9895-8e162a51c50f">
-      <body>takeTurn() is different in each. In one, the computer goes first. In the other, the user goes first. They overload the function in the base class</body>
-      <annotatedElements>
-        <classMoniker
-          Id="7bedeab1-6236-4822-87f4-ec4d041722aa"
-          LastKnownName="DraftAgainstComp"
-          LastKnownLocation="ModelingProject1.uml" />
-        <classMoniker
-          Id="2a09e4af-f111-4c7b-9775-e4b74e5ff4f7"
-          LastKnownName="ComputerSimulation"
-          LastKnownLocation="ModelingProject1.uml" />
-      </annotatedElements>
-    </comment>
   </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances

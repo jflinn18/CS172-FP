@@ -1,65 +1,35 @@
-﻿Build started 12/4/2014 12:08:58 PM.
-     1>Project "C:\Users\Joseph\Documents\GitHub\CS172-FP\Final Project\Final Project\Final Project.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/4/2014 2:08:51 PM.
+     1>Project "C:\Users\jflinn18\Documents\GitHub\CS172-FP\Final Project\Final Project\Final Project.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         E:\Programs\Visual Studios 13\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ChampDatabase.cpp Champion.cpp ChampionSearch.cpp CompDraft.cpp Draft.cpp Main.cpp Team.cpp UserDraft.cpp UserInput.cpp
-         UserInput.cpp
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\draft.h(22): error C2146: syntax error : missing ';' before identifier '_ui'
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\draft.h(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14): error C2011: 'ChampionSearch' : 'class' type redefinition
-                 c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(82): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(90): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(93): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(114): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(116): warning C4018: '>' : signed/unsigned mismatch
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(124): warning C4018: '>' : signed/unsigned mismatch
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(126): warning C4018: '>' : signed/unsigned mismatch
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(134): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(139): error C3867: 'Champion::getPrimaryRole': function call missing argument list; use '&Champion::getPrimaryRole' to create a pointer to member
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(141): error C3867: 'Champion::getSecondaryRole': function call missing argument list; use '&Champion::getSecondaryRole' to create a pointer to member
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(141): error C2446: '==' : no conversion from 'const char *' to 'std::string (__thiscall Champion::* )(void)'
-                 There is no context in which this conversion is possible
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(141): error C2040: '==' : 'std::string (__thiscall Champion::* )(void)' differs in levels of indirection from 'const char [3]'
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userinput.cpp(146): warning C4018: '<' : signed/unsigned mismatch
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ChampDatabase.cpp CompDraft.cpp Draft.cpp Main.cpp UserDraft.cpp
          UserDraft.cpp
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\compdraft.h(16): error C2504: 'Draft' : base class undefined
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14): error C2011: 'ChampionSearch' : 'class' type redefinition
-                 c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
-         Team.cpp
+     1>c:\users\jflinn18\documents\github\cs172-fp\final project\final project\championsearch.h(14): error C2011: 'ChampionSearch' : 'class' type redefinition
+                 c:\users\jflinn18\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
          Main.cpp
+     1>c:\users\jflinn18\documents\github\cs172-fp\final project\final project\championsearch.h(14): error C2011: 'ChampionSearch' : 'class' type redefinition
+                 c:\users\jflinn18\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
          Draft.cpp
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\compdraft.h(16): error C2504: 'Draft' : base class undefined
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14): error C2011: 'ChampionSearch' : 'class' type redefinition
-                 c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userdraft.h(16): error C2504: 'Draft' : base class undefined
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\draft.cpp(7): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\draft.cpp(10): error C2027: use of undefined type 'ChampionSearch'
-                 c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\draft.cpp(10): fatal error C1903: unable to recover from previous error(s); stopping compilation
+     1>c:\users\jflinn18\documents\github\cs172-fp\final project\final project\draft.cpp(7): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
          CompDraft.cpp
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\userdraft.h(16): error C2504: 'Draft' : base class undefined
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14): error C2011: 'ChampionSearch' : 'class' type redefinition
-                 c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
-         Champion.cpp
+     1>c:\users\jflinn18\documents\github\cs172-fp\final project\final project\championsearch.h(14): error C2011: 'ChampionSearch' : 'class' type redefinition
+                 c:\users\jflinn18\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
          ChampDatabase.cpp
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14): error C2011: 'ChampionSearch' : 'class' type redefinition
-                 c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\draft.h(22): error C2146: syntax error : missing ';' before identifier '_ui'
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\draft.h(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\champdatabase.cpp(24): warning C4150: deletion of pointer to incomplete type 'ChampionSearch'; no destructor called
-                 c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\champdatabase.cpp(107): error C2027: use of undefined type 'ChampionSearch'
-                 c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\champdatabase.cpp(107): error C2227: left of '->search' must point to class/struct/union/generic type
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\champdatabase.cpp(138): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\champdatabase.cpp(145): error C2027: use of undefined type 'ChampionSearch'
-                 c:\users\joseph\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
-     1>c:\users\joseph\documents\github\cs172-fp\final project\final project\champdatabase.cpp(145): fatal error C1903: unable to recover from previous error(s); stopping compilation
+     1>c:\users\jflinn18\documents\github\cs172-fp\final project\final project\championsearch.h(14): error C2011: 'ChampionSearch' : 'class' type redefinition
+                 c:\users\jflinn18\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
+     1>c:\users\jflinn18\documents\github\cs172-fp\final project\final project\champdatabase.cpp(17): warning C4150: deletion of pointer to incomplete type 'ChampionSearch'; no destructor called
+                 c:\users\jflinn18\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
+     1>c:\users\jflinn18\documents\github\cs172-fp\final project\final project\champdatabase.cpp(111): error C2027: use of undefined type 'ChampionSearch'
+                 c:\users\jflinn18\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
+     1>c:\users\jflinn18\documents\github\cs172-fp\final project\final project\champdatabase.cpp(111): error C2227: left of '->search' must point to class/struct/union/generic type
+     1>c:\users\jflinn18\documents\github\cs172-fp\final project\final project\champdatabase.cpp(142): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\jflinn18\documents\github\cs172-fp\final project\final project\champdatabase.cpp(149): error C2027: use of undefined type 'ChampionSearch'
+                 c:\users\jflinn18\documents\github\cs172-fp\final project\final project\championsearch.h(14) : see declaration of 'ChampionSearch'
+     1>c:\users\jflinn18\documents\github\cs172-fp\final project\final project\champdatabase.cpp(149): fatal error C1903: unable to recover from previous error(s); stopping compilation
          Generating Code...
-         Skipping... (no relevant changes detected)
-         ChampionSearch.cpp
-     1>Done Building Project "C:\Users\Joseph\Documents\GitHub\CS172-FP\Final Project\Final Project\Final Project.vcxproj" (Build target(s)) -- FAILED.
+     1>c:\users\jflinn18\documents\github\cs172-fp\final project\final project\draft.cpp(67): warning C4715: 'Draft::checkBan' : not all control paths return a value
+     1>c:\users\jflinn18\documents\github\cs172-fp\final project\final project\draft.cpp(77): warning C4715: 'Draft::checkPick' : not all control paths return a value
+     1>Done Building Project "C:\Users\jflinn18\Documents\GitHub\CS172-FP\Final Project\Final Project\Final Project.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:03.07
+Time Elapsed 00:00:01.49
