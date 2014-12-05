@@ -10,7 +10,8 @@ ChampDatabase::ChampDatabase()
 	_ui = new UserInput;
 	createChampList(); // calls the function that creates the list of names for the champion
 
-	champSearch = new ChampionSearch(_listOfChampNames);
+	//setChampSearch();
+	//_champSearch = new ChampionSearch(_listOfChampNames);
 
 	createChamps(); // call the funtion that creates the vector of champion objects
 	completeADraft();
@@ -20,7 +21,7 @@ ChampDatabase::ChampDatabase()
 
 ChampDatabase::~ChampDatabase()
 {
-	delete champSearch;
+	//delete _champSearch;
 	delete _ui;
 }
 
@@ -64,7 +65,7 @@ void ChampDatabase::addChamp(string &champName)
 
 	c.setName(champName); // sets the name of the champion
 
-	filein.open(champName + ".txt"); // opens the corresponding champion file
+	filein.open("Champions//" + champName + ".txt", ios::in); // opens the corresponding champion file
 
 	if (filein.fail()) 
 	{
@@ -74,10 +75,15 @@ void ChampDatabase::addChamp(string &champName)
 
 	while (!filein.fail()) // reads in all of the data from the file
 	{
+
 		while(!(s == "\n")) // reads and adds data into c.goodCounters until the paragraph break
+
+			// infinite loop
+
 		{
 			getline(filein, s);
 			c.setGoodCounter(s);
+			debug();
 		}
 
 		while (!(s == "\n")) // reads and adds data into c.badCounters until the paragraph break
@@ -99,17 +105,10 @@ void ChampDatabase::addChamp(string &champName)
 			getline(filein, s);
 			c.setPositions(s);
 		}
+
 	}
 
 	_champs.push_back(c);
-}
-
-
-// returns the specified champion from the vector of champions given the champion's name
-Champion ChampDatabase::getChamp(string &champ)
-{
-	// searches for the champion and returns that champion
-	return _champs[champSearch->search(champ)];
 }
 
 
@@ -141,15 +140,23 @@ void ChampDatabase::createChampList()
 void ChampDatabase::createChamps()
 {
 	for (unsigned int i = 0; i < _listOfChampNames.size(); i++)
-		addChamp(_listOfChampNames[0]); // adds one champion object for each champion in the listOfChampNames vector
+		addChamp(_listOfChampNames[i]); // adds one champion object for each champion in the listOfChampNames vector
 }
 
 
-void ChampDatabase::setChampSearch()
-{
-	champSearch = new ChampionSearch(_listOfChampNames);
-}
+//void ChampDatabase::setChampSearch()
+//{
+//	_champSearch = new ChampionSearch(_listOfChampNames);
+//}
 
+
+// returns the specified champion from the vector of champions given the champion's name
+//Champion ChampDatabase::getChamp(string &champ)
+//{
+//	// searches for the champion and returns that champion
+//	return _champs[_champSearch->search(champ)];
+//}
 
 vector<Champion> ChampDatabase::getChamps() { return _champs; }
 vector<string> ChampDatabase::getList() { return _listOfChampNames; }
+void ChampDatabase::debug() { cout << "Got here.\n"; }
