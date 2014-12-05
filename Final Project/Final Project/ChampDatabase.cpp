@@ -79,6 +79,8 @@ void ChampDatabase::addChamp(string &champName)
 		while(!(s == "\n")) // reads and adds data into c.goodCounters until the paragraph break
 
 			// infinite loop
+			// s == "" when there I thought there would be a \n
+			// fix this.
 
 		{
 			getline(filein, s);
