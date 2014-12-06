@@ -42,8 +42,8 @@ public:
 	string getChampName();
 	void setChampName(string&);
 	void takeTurn();
-	virtual void banChamps();// needs comp bann 
-	virtual void pickChamps();// needs comp pick
+	virtual void banChamps() = 0;// needs comp bann 
+	virtual void pickChamps() = 0;// needs comp pick
 
 	void compBan();
 	void userBan();

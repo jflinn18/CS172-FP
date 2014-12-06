@@ -40,11 +40,11 @@ void UserInput::checkPicked(){
 // asks the user which type of draft they want to do
 string UserInput::whatDraft()
 {
-	cout << "At any time, write '-man' see the different commands for this program.\n" << endl;
-	cout << "Which draft would you like to do? ";
+	cout << "At any time, write '-man' see the different commands for this program.\n";
+	cout << "Which draft would you like to do? \n";
 	getInput();
 
-	checkResp(); // checks if the user wants to do anything else than what the computer is asking
+	//checkResp(); // checks if the user wants to do anything else than what the computer is asking
 
 	return resp;
 
@@ -200,7 +200,7 @@ void UserInput::outputWinner(int user, int computer)
 string UserInput::getInput()
 {
 	cout << ">>: "; 
-	cin >> resp;
+	getline(cin, resp);
 
 	return resp;
 }

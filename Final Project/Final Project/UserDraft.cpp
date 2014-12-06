@@ -2,10 +2,14 @@
 
 using namespace std;
 
-UserDraft::UserDraft(vector<string> listChamps, vector<Champion> champs): Draft(listChamps, champs){}
+UserDraft::UserDraft(vector<string> listChamps, vector<Champion> champs)// : Draft(listChamps, champs)
+{ 
+	
+	cout << "got here"; }
 
 void UserDraft::pickChamps()
 {
+	
 	userPick();
 	compPick(0);
 	compPick(7);

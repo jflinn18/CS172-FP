@@ -1,10 +1,10 @@
-﻿Build started 12/5/2014 11:30:55 AM.
-     1>Project "C:\Users\Joseph\Documents\GitHub\CS172-FP\Final Project\Final Project\Final Project.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/6/2014 1:52:42 PM.
+     1>Project "C:\Users\Burglore\Documents\GitHub\CS172-FP\Final Project\Final Project\Final Project.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ChampDatabase.cpp
-         ChampDatabase.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt UserDraft.cpp
+         UserDraft.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Joseph\Documents\GitHub\CS172-FP\Final Project\Debug\Final Project.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Joseph\Documents\GitHub\CS172-FP\Final Project\Debug\Final Project.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Joseph\Documents\GitHub\CS172-FP\Final Project\Debug\Final Project.lib" /MACHINE:X86 Debug\ChampDatabase.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Burglore\Documents\GitHub\CS172-FP\Final Project\Debug\Final Project.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Burglore\Documents\GitHub\CS172-FP\Final Project\Debug\Final Project.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Burglore\Documents\GitHub\CS172-FP\Final Project\Debug\Final Project.lib" /MACHINE:X86 Debug\ChampDatabase.obj
          Debug\Champion.obj
          Debug\ChampionSearch.obj
          Debug\CompDraft.obj
@@ -13,9 +13,9 @@
          Debug\Team.obj
          Debug\UserDraft.obj
          Debug\UserInput.obj
-         Final Project.vcxproj -> C:\Users\Joseph\Documents\GitHub\CS172-FP\Final Project\Debug\Final Project.exe
-     1>Done Building Project "C:\Users\Joseph\Documents\GitHub\CS172-FP\Final Project\Final Project\Final Project.vcxproj" (Build target(s)).
+         Final Project.vcxproj -> C:\Users\Burglore\Documents\GitHub\CS172-FP\Final Project\Debug\Final Project.exe
+     1>Done Building Project "C:\Users\Burglore\Documents\GitHub\CS172-FP\Final Project\Final Project\Final Project.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:10.37
+Time Elapsed 00:00:03.65

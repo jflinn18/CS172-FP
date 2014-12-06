@@ -61,7 +61,7 @@ void ChampDatabase::addChamp(string &champName)
 {
 	Champion c;  // creates a new Champion object to make
 	fstream filein;
-	string s;
+	string s = "empty";
 
 	c.setName(champName); // sets the name of the champion
 
@@ -76,19 +76,14 @@ void ChampDatabase::addChamp(string &champName)
 	while (!filein.fail()) // reads in all of the data from the file
 	{
 
-		while(!(s == "\n")) // reads and adds data into c.goodCounters until the paragraph break
-
-			// infinite loop
-			// s == "" when there I thought there would be a \n
-			// fix this.
+		while(!(s == "")) // reads and adds data into c.goodCounters until the paragraph break
 
 		{
 			getline(filein, s);
 			c.setGoodCounter(s);
-			debug();
 		}
 
-		while (!(s == "\n")) // reads and adds data into c.badCounters until the paragraph break
+		while (!(s == "")) // reads and adds data into c.badCounters until the paragraph break
 		{
 			getline(filein, s);
 			c.setBadCounter(s);

@@ -76,8 +76,8 @@ bool Draft::checkPick(string& pick){
 	}
 }
 
-void Draft::banChamps(){}
-void Draft::pickChamps(){}
+//void Draft::banChamps(){}
+//void Draft::pickChamps(){}
 
 
 void Draft::userPick(){
@@ -138,9 +138,11 @@ string Draft::compChampPick(int& i)
 
 
 void Draft::executeDraft(){
+
 	banChamps();
 	pickChamps();
 	score();
+
 }
 
 
