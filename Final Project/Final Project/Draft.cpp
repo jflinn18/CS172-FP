@@ -9,8 +9,6 @@ Draft::Draft(vector<string> listchamps, vector<Champion> champs)
 	_champs = champs;
 	_champSearch = new ChampionSearch(listchamps);
 
-
-	executeDraft();
 }
 
 Draft::~Draft()
