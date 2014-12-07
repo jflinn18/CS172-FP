@@ -56,9 +56,8 @@ bool Draft::checkBan(string& ban){
 		if (bannedChamps[i] == ban){
 			return false;
 		}
-		else
-			return true;
 	}
+	return true;
 }
 
 bool Draft::checkPick(string& pick){
