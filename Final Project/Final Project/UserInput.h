@@ -18,7 +18,6 @@ private:
 	vector<vector<string>> draftOutputFormat;
 
 	void checkResp();
-	void draftOutput();
 	void outputWinner(int, int);
 
 
@@ -41,7 +40,7 @@ public:
 	void printMan();
 	void clearWindow();
 	void draftInputError();
-
+	void draftOutput();
 };
 
 #endif

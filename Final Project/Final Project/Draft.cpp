@@ -41,7 +41,10 @@ void Draft::compBan()
 void Draft::userBan()
 {
 	string banned = "";
+	_ui.banChamps();
 	banned = _ui.getInput();
+
+
 
 	addbannedChamps(banned);
 	_ui.updatebans(bannedChamps);
@@ -74,8 +77,9 @@ bool Draft::checkPick(string& pick){
 
 void Draft::userPick(){
 	string picked = "";
+	_ui.pickChamps();
 	picked = _ui.getInput();
-
+	
 
 	while (!checkPick(picked) && !checkBan(picked)){ //checks that the champion hasn't been banned already.
 		_ui.checkPicked();
@@ -96,7 +100,6 @@ void Draft::compPick(int i){
 
 
 	while (!checkPick(picked) && !checkBan(picked)){ //checks that the champion hasn't been picked already.
-		k = rand() % 121;
 		picked = compChampPick(i);
 	}
 
@@ -130,7 +133,6 @@ string Draft::compChampPick(int& i)
 
 
 void Draft::executeDraft(){
-	
 	banChamps();
 	pickChamps();
 	score();

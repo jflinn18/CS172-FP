@@ -20,7 +20,7 @@ UserInput::UserInput()
 	{
 		for (int j = 0; j < 3; j++) // each column
 		{
-			temp[i][j] == "-----------";
+			temp[i][j] = "-----------";
 		}
 	}
 
@@ -81,6 +81,8 @@ void UserInput::updatebans(vector<string> bans)
 {
 	for (unsigned int i = 0; i < bans.size(); i++) // this reads in the banned champions from the vector that was passed in
 		draftOutputFormat[i + 1][1] = bans[i]; // i+1 becasue we want to keep the data in the first row of the vector. 
+	
+	draftOutput();
 }
 
 
@@ -90,8 +92,12 @@ void UserInput::updatepicks(vector<string> user, vector<string> computer)
 	for (unsigned int i = 0; i < user.size(); i++)
 		draftOutputFormat[i + 1][0] = user[i]; // updates the user column in the 2D vector
 
+	draftOutput();
+
 	for (unsigned int j = 0; j < computer.size(); j++)
 		draftOutputFormat[j + 1][2] = computer[j]; // updates the computer column in the 2D vector
+
+	draftOutput();
 }
 
 
@@ -167,7 +173,7 @@ void UserInput::draftOutput()
 	{
 		for (int j = 0; j < 3; j++) // print the first row
 		{
-			cout << setw(30) << draftOutputFormat[j][i];
+			cout << setw(15) << draftOutputFormat[i][j];
 		}
 		cout << endl;
 	}
