@@ -11,7 +11,8 @@ UserDraft::UserDraft(vector<string> listChamps, vector<Champion> champs) : Draft
 
 void UserDraft::pickChamps()
 {
-	
+	_ui.pickChamps();
+
 	userPick();
 	compPick(0);
 	compPick(7);
@@ -26,6 +27,7 @@ void UserDraft::pickChamps()
 
 void UserDraft::banChamps()
 {
+	_ui.banChamps();
 	for (int i = 0; i < 3; i++){
 		userBan();
 		compBan();

@@ -2,7 +2,11 @@
 
 using namespace std;
 
-CompDraft::CompDraft(vector<string> listChamps, vector<Champion> champs) : Draft(listChamps, champs){}
+CompDraft::CompDraft(vector<string> listChamps, vector<Champion> champs) : Draft(listChamps, champs)
+{
+	executeDraft();
+
+}
 
 void CompDraft::pickChamps()
 {

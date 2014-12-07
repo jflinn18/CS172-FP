@@ -7,16 +7,16 @@ using namespace std;
 
 UserInput::UserInput()
 {
-	vector<vector<string>> temp(6);
+	vector<vector<string>> temp(7);
 
-	for (int i = 0; i < 6; i++)
+	for (int i = 0; i < 7; i++)
 		temp[i] = vector<string>(3);
 
 	temp[0][0] = "User:";
 	temp[0][1] = "Banned:";
 	temp[0][2] = "Computer:";
 
-	for (int i = 1; i < 6; i++) // each row except the first
+	for (int i = 1; i < 7; i++) // each row except the first
 	{
 		for (int j = 0; j < 3; j++) // each column
 		{
@@ -80,7 +80,7 @@ void UserInput::pickChamps()
 void UserInput::updatebans(vector<string> bans)
 {
 	for (unsigned int i = 0; i < bans.size(); i++) // this reads in the banned champions from the vector that was passed in
-		draftOutputFormat[i + 1][1] == bans[i]; // i+1 becasue we want to keep the data in the first row of the vector. 
+		draftOutputFormat[i + 1][1] = bans[i]; // i+1 becasue we want to keep the data in the first row of the vector. 
 }
 
 
@@ -88,10 +88,10 @@ void UserInput::updatebans(vector<string> bans)
 void UserInput::updatepicks(vector<string> user, vector<string> computer)
 {
 	for (unsigned int i = 0; i < user.size(); i++)
-		draftOutputFormat[i + 1][0] == user[i]; // updates the user column in the 2D vector
+		draftOutputFormat[i + 1][0] = user[i]; // updates the user column in the 2D vector
 
-	for (unsigned int i = 0; i < computer.size(); i++)
-		draftOutputFormat[i + 1][2] == computer[i]; // updates the computer column in the 2D vector
+	for (unsigned int j = 0; j < computer.size(); j++)
+		draftOutputFormat[j + 1][2] = computer[j]; // updates the computer column in the 2D vector
 }
 
 
@@ -163,7 +163,7 @@ void UserInput::draftOutput()
 	clearWindow();
 
 	// prints out the 2D vector
-	for (int i = 0; i < 6; i++)
+	for (int i = 0; i < 7; i++)
 	{
 		for (int j = 0; j < 3; j++) // print the first row
 		{

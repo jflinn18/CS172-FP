@@ -16,7 +16,7 @@ using namespace std;
 
 class Draft
 {
-private:
+protected:
 	Team _user; // maybe Team user and Team computer
 	Team _computer;
 	UserInput _ui;
