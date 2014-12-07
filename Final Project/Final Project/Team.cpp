@@ -5,6 +5,7 @@
 using namespace std;
 
 
+Team::Team(){ _points = 0; }
 int Team::getPoints() { return _points; }
 vector<string> Team::getTeamChampNames() { return _teamChampNames; }
 string Team::getChamp(int i){ return _teamChampNames[i]; }

@@ -179,4 +179,5 @@ void Draft::score(){
 		}
 	}
 
+	_ui.outputTeamPoints(_user, _computer);
 }

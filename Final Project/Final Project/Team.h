@@ -12,6 +12,7 @@ private:
 	vector<string> _teamChampNames;
 
 public:
+	Team();
 	void addTeamChampNames(string&);
 	int getPoints();
 	vector<string> getTeamChampNames();

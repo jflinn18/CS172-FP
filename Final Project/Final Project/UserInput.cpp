@@ -28,11 +28,11 @@ UserInput::UserInput()
 } 
 
 void UserInput::checkBanned(){
-	cout << "Champion already banned. Ban a different champ: ";
+	cout << "Champion already banned. Ban a different champ: \n";
 
 }
 void UserInput::checkPicked(){
-	cout << "Champion already picked. Pick a different champ: ";
+	cout << "Champion already picked. Pick a different champ: \n";
 }
 
 
@@ -182,8 +182,8 @@ void UserInput::draftOutput()
 
 void UserInput::outputTeamPoints(Team user, Team computer)
 {
-	cout << "User's team points: " << user.getPoints();  // prints the team points for user
-	cout << "Computer's team points: " << computer.getPoints(); // prints the team points for the computer
+	cout << "User's team points: " << user.getPoints() << endl;;  // prints the team points for user
+	cout << "Computer's team points: " << computer.getPoints() << endl; // prints the team points for the computer
 
 	outputWinner(user.getPoints(), computer.getPoints());
 }
