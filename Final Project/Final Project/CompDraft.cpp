@@ -5,7 +5,6 @@ using namespace std;
 CompDraft::CompDraft(vector<string> listChamps, vector<Champion> champs) : Draft(listChamps, champs)
 {
 	executeDraft();
-
 }
 
 void CompDraft::pickChamps()
@@ -24,6 +23,7 @@ void CompDraft::pickChamps()
 
 void CompDraft::banChamps()
 {
+	_ui.draftOutput();
 	for (int i = 0; i < 3; i++){
 		compBan();
 		userBan();

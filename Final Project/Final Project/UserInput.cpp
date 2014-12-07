@@ -44,7 +44,7 @@ string UserInput::whatDraft()
 	cout << "Which draft would you like to do? \n";
 	getInput();
 
-	//checkResp(); // checks if the user wants to do anything else than what the computer is asking
+	checkResp(); // checks if the user wants to do anything else than what the computer is asking
 
 	return resp;
 
@@ -220,28 +220,45 @@ void UserInput::clearWindow()
 
 void UserInput::printMan()
 {
-	cout << "There are two types of drafts:\nComputer Draft - where the computer generates good champion counters.\n";
-	cout << "User Draft - where the user picks the counters\n";
+	cout << "\n\nThere are two types of drafts:\n" << endl;
+	cout << "Computer Draft - where the computer generates good champion counters.\n <Computer Draft> / <computer draft>\n\n";
+	cout << "User Draft - where the user picks the counters.\n <User Draft> / <user draft>\n\n\n";
 
 	cout << "-x: \n\t Exits the program" << endl;
 
+	cout << endl;
+
 	cout << "-man: \n\t Shows the user manual" << endl;
 
+	cout << endl;
+
+	cout << "-q to exit -man\n";
+
 	//cout << "-l: \n\t Used after the type of draft to choose the learning draft" << endl;
-	cout << "\t <type_of_draft> <-l>" << endl;
+	//cout << "\t<type_of_draft> <-l>" << endl;
+
+	getInput();
+	checkResp();
+	getInput();
 }
 
 // checks to make sure that the user doesn't want something that the computer isn't asking for. 
 void UserInput::checkResp()
 {
-	if (resp.find("-x") > 0)
+	if (resp == "-x")
 		exit(0);
 	
-	if (resp.find("-man") > 0)
+	if (resp == "-man")
 		printMan();
+
+	if (resp == "-q")
+		clearWindow();
+
 
 	//if (resp.find("-l") > 0)
 		// call a special draft
+
+	//getInput();
 }
 
 

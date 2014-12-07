@@ -5,8 +5,6 @@ using namespace std;
 UserDraft::UserDraft(vector<string> listChamps, vector<Champion> champs) : Draft(listChamps, champs)
 { 
 	executeDraft();
-
-	//cout << "got here"; 
 }
 
 void UserDraft::pickChamps()
