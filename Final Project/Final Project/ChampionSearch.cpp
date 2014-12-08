@@ -11,10 +11,7 @@ ChampionSearch::ChampionSearch(vector<string> &champs)
 	_champs = champs;
 }
 
-ChampionSearch::~ChampionSearch()
-{
-	// do something
-}
+ChampionSearch::~ChampionSearch(){}
 
 
 // searches for the champion name that is given to the function

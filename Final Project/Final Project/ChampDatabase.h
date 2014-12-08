@@ -6,7 +6,6 @@
 #include <string>
 #include <vector>
 #include "Champion.h"
-//#include "ChampionSearch.h"
 #include "UserInput.h"
 #include "CompDraft.h"
 #include "UserDraft.h"
@@ -19,11 +18,9 @@ class ChampDatabase
 private: 
 	vector<Champion> _champs;
 	vector<string> _listOfChampNames;
-	//ChampionSearch *_champSearch; 
 	UserInput *_ui;
 	CompDraft *_cd;
 	UserDraft *_ud;
-	//void setChampSearch();
 	void addChamp(string&);
 	void createChampList();
 	void createChamps();
@@ -31,16 +28,10 @@ private:
 
 public:
 	ChampDatabase();
-	~ChampDatabase();
 	void completeADraft();
-	//Champion getChamp(string&);
 
 	vector<Champion> getChamps();
 	vector<string> getList();
-
-	void debug();
-	
-	
 };
 
 #endif

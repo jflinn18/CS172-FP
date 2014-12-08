@@ -37,11 +37,8 @@ public:
 	void addbannedChamps(string&);
 	vector<string> getpickedChamps();
 	vector<string> getbannedChamps();
+
 	void executeDraft();
-	Champion generateChamp();
-	string getChampName();
-	void setChampName(string&);
-	void takeTurn();
 	virtual void banChamps() = 0;// needs comp bann 
 	virtual void pickChamps() = 0;// needs comp pick
 
@@ -53,8 +50,6 @@ public:
 	bool checkBan(string&);
 	//bool checkPos(string&); //need for compPick. check that the champ fulfills a certain position.
 	string compChampPick(int&);
-
-	
 
 	void score(); //need to develope scoring techniques
 };

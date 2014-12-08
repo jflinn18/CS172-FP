@@ -75,9 +75,6 @@ bool Draft::checkPick(string& pick){
 	return true;
 }
 
-//void Draft::banChamps(){}
-//void Draft::pickChamps(){}
-
 
 void Draft::userPick(){
 	string picked = "";

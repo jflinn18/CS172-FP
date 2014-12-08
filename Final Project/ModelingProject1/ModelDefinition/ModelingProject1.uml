@@ -159,6 +159,18 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="37fb661a-58b9-4233-8d4d-b73994fdf22c"
+            name="vector&lt;string&gt; Positions;"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -177,8 +189,8 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="52284938-22f2-46e7-9ace-12d92d1a127a"
-                      LastKnownName="string;"
+                      Id="f64f6a7b-d9ad-434b-87b7-d2e4313ab1c2"
+                      LastKnownName="vector&lt;string&gt;;"
                       LastKnownLocation="ModelingProject1.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -201,8 +213,8 @@
                   isUnique="false">
                   <type_NamedElement>
                     <undefinedTypeMoniker
-                      Id="52284938-22f2-46e7-9ace-12d92d1a127a"
-                      LastKnownName="string;"
+                      Id="044ef420-b572-4cd8-abc8-fa9fce525909"
+                      LastKnownName="vector&lt; string&gt;;"
                       LastKnownLocation="ModelingProject1.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -273,7 +285,7 @@
           </operation>
           <operation
             Id="0c14aca6-9a1b-46ea-9c8a-952537c8cad0"
-            name="getPrimary"
+            name="getPrimaryRole"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -383,7 +395,7 @@
           </operation>
           <operation
             Id="552168a9-8bdf-44e8-9fd2-b6a288b8121c"
-            name="getSecondary"
+            name="getSecondaryRole"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -431,6 +443,85 @@
                 <parameter
                   Id="56b502e9-b3f1-4848-9fe7-38b20b7fd256"
                   name="string"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ebd4e3de-46b3-4675-9fa3-3d529f995c56"
+            name="getPositions"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="60abeec9-ba4c-4ed7-bcd5-3be3b54fe0b8"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f64f6a7b-d9ad-434b-87b7-d2e4313ab1c2"
+                      LastKnownName="vector&lt;string&gt;;"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bed27aba-f86a-4c50-85a1-cb4aeebe869b"
+            name="setPositions"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="00ebe018-d1e5-4780-b6dc-f38cc737a215"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="b57cbe4c-c620-4295-a2d6-9058cf3a0386"
+                      LastKnownName="void;"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ee6733b9-ec4d-4158-be39-00dd674c275e"
+            name="getGoodChamp"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c96d18d3-4d97-4965-a607-4701d3d11bd5"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="52284938-22f2-46e7-9ace-12d92d1a127a"
+                      LastKnownName="string;"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a8657e2b-fbd1-4688-ae69-cf1409b7bbdf"
+                  name="int"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
@@ -505,6 +596,14 @@
           <operation
             Id="f7734ee7-6131-4034-a02f-e460f8569b06"
             name="ChampionSearch"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="93d7ba57-3302-4593-b937-44c7cef29668"
+            name="~ChampionSearch"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -626,8 +725,32 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="5979e3da-35ab-4f06-851f-6a65f9e5ac74"
-            name="ChampionSearch champSearch;"
+            Id="258f7804-9191-41cd-b0f4-349d494203f2"
+            name="UserInput *ui;"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="eaac82de-d21a-4b9d-bcce-c4f5f7d98eba"
+            name="CompDraft *cd"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="beba3a2f-9024-4ddd-8a5c-055823267f17"
+            name="UserDraft *ud"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -697,7 +820,7 @@
           </operation>
           <operation
             Id="4b7af98f-6d8b-4687-8a6e-fa18064aa78b"
-            name="getChamp"
+            name="getChamps"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -706,23 +829,16 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="93d5274e-b9cd-49d6-a195-607cec98dd66"
+                  Id="d353c6ac-3c15-4d30-8dd4-c6460649089a"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
-                    <classMoniker
-                      Id="cf5f87c4-651f-4607-8440-f6bff489e1f9"
-                      LastKnownName="Champion"
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
                       LastKnownLocation="ModelingProject1.uml" />
                   </type_NamedElement>
                 </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="47574bac-1f9c-4544-a109-66407b95d948"
-                  name="Champion"
-                  direction="In"
-                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -760,31 +876,6 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="6692068b-5ef5-44f6-9fec-a32c4a00cede"
-            name="setChampSearch"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="c408af90-e120-4ae5-ad67-842b1d7e2afe"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="b57cbe4c-c620-4295-a2d6-9058cf3a0386"
-                      LastKnownName="void;"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="989f0295-112b-4699-bc03-129aaedc58be"
             name="createChamps"
             visibility="Private"
@@ -803,6 +894,62 @@
                     <undefinedTypeMoniker
                       Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
                       LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a0c362f4-f5e0-4ad6-aba1-e75ffe49ae44"
+            name="allocateDraft"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f04e2211-6127-48e7-ba28-49e80463633b"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="992e7385-3b44-42f0-938d-791e9319efac"
+                  name="string&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cd701adb-733f-4957-80bf-2e7eae02dce2"
+            name="getList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2c10b9c1-ff74-4f46-bdcb-c2c5e8c3c050"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="9f8fd6e6-4e04-4b1e-b635-2bec0eecaaae"
+                      LastKnownName="vector&lt;string&gt;"
                       LastKnownLocation="ModelingProject1.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -837,7 +984,7 @@
     <packageHasNamedElement>
       <class
         Id="2a09e4af-f111-4c7b-9775-e4b74e5ff4f7"
-        name="ComputerSimulation"
+        name="CompDraft"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -853,8 +1000,8 @@
         </generalsInternal>
         <ownedOperationsInternal>
           <operation
-            Id="25d7a493-2df6-495f-87d2-ee8129f47f79"
-            name="takeTurn"
+            Id="75ff7c35-0540-45cf-a19c-4659344e1718"
+            name="CompDraft"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -863,7 +1010,56 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="15dd38fc-ea2f-4a89-ad65-6dd926794efa"
+                  Id="0c15c9bc-71ba-4391-b3f1-15a619289048"
+                  name="vecotr&lt;string&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f3add2d0-172b-428c-b13e-c04db4d72562"
+                  name="vector&lt;Champion&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="14466949-cf29-423c-92cf-481d4f2f580e"
+            name="pickChamps"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="05889783-46e3-4c6d-8a4f-3bcf3157838e"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0b2b3848-2a0a-4d02-bf0f-abbb6d2a4427"
+            name="banChamps"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="83876ed0-33be-4a84-9ef8-145ff8812923"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
@@ -882,7 +1078,7 @@
     <packageHasNamedElement>
       <class
         Id="7bedeab1-6236-4822-87f4-ec4d041722aa"
-        name="DraftAgainstComp"
+        name="UserDraft"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -898,8 +1094,8 @@
         </generalsInternal>
         <ownedOperationsInternal>
           <operation
-            Id="a1aca7f1-85e7-404a-8e9f-3838fa18f62c"
-            name="takeTurn"
+            Id="a62222a0-709b-45e7-befb-ea98d2a00dd9"
+            name="UserDraft"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -908,7 +1104,56 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="43732bf9-22ef-4285-885d-4811c519a418"
+                  Id="561b656f-3898-45c0-baaf-c1f6436295a8"
+                  name="vector&lt;string&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="024fba67-ce5a-45be-8863-0922fcb41476"
+                  name="vector&lt;Champion&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="da0a15f2-bad2-4593-bb66-8059a6587a17"
+            name="pickChamps"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="09104484-3ee6-4d43-a19f-27bfac908468"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cc5ad941-b191-4352-851b-66a2bfaed697"
+            name="banChamps"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c75a420a-cc3a-4ad8-b89a-ab764094061b"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
@@ -1026,7 +1271,7 @@
             isComposite="false" />
           <property
             Id="52f6b065-73ec-4ded-9a63-8f0fbb24eb6f"
-            name="Team red;"
+            name="Team computer;"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -1038,7 +1283,67 @@
             isComposite="false" />
           <property
             Id="79769923-5103-4211-9ff4-2184c94c6325"
-            name="Team blue"
+            name="Team user;"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e20c3aa9-0524-4f4a-a037-6261a6d9158d"
+            name="vector&lt;string&gt; pickedChamps;"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="81e52ad8-595f-4cbc-88ba-6630aef21811"
+            name="vector&lt;string&gt; bannedChamps;"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="34a2492f-02cd-4882-ba5e-2344bcd49747"
+            name="vector&lt;Champion&gt; champs;"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="eaa89a40-b1e1-409e-ad99-415b90baea74"
+            name="vector&lt;string&gt; listChampNames;"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="0cc982b6-b62e-4a41-a82e-d08a7ff4d12f"
+            name="ChampionSearch *champSearch;"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -1051,109 +1356,6 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="4c776629-f8c8-49fd-ae06-9086abba809e"
-            name="examineUserInput"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="a74c2fc2-c7ee-4bfb-897f-a1a08043656e"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="b57cbe4c-c620-4295-a2d6-9058cf3a0386"
-                      LastKnownName="void;"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="73eb3d42-4350-4a6f-bee4-0afb009de09e"
-            name="generateChamp"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="01a8ec4a-4fb6-42ff-b417-74ce9185ee2a"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="cf5f87c4-651f-4607-8440-f6bff489e1f9"
-                      LastKnownName="Champion"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="87419c3c-116a-45e5-9e0e-4e8245eae302"
-            name="getChampName"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="eef0a7f2-aa94-4d95-9d86-0d89550418aa"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="168793a9-f748-4811-aafb-7b755b23af13"
-                      LastKnownName="string"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="afe481c3-44f4-44f0-8cd6-6119bc321ca1"
-            name="setChampName"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="19f963ce-83e4-47d4-8ac9-c545fbd44036"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
-                      LastKnownName="void"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="3ede0924-d3a1-4a8e-a145-df3966a3f0db"
-                  name="string"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="16b51f0c-dd1a-4b8d-8d9c-7f05bbb16e02"
             name="Draft"
             isLeaf="false"
@@ -1164,58 +1366,17 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="3be21b7f-d18c-4b73-837c-e706ed202156"
-                  name="vector&lt;string&gt; champs"
+                  Id="05c8ea14-3c7c-465b-a911-3099d3fe26f9"
+                  name="vector&lt;string&gt; listChamps"
                   direction="In"
                   isUnique="false" />
               </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="ec90257e-650f-4f6a-8d89-450007f1c0d2"
-            name="whoseTurn"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="b121b784-8e9f-4266-a14d-36cdd03fd088"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="c43a0662-9627-4ae4-bc9d-7dd7976279be"
-                      LastKnownName="int"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="16251421-236b-4b31-86e2-47e833c8b8e4"
-            name="takeTurn"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="e20b54c7-b873-4ff3-9c39-557a6ba44899"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
-                      LastKnownName="void"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
+                  Id="18da1663-da12-4d00-a9d1-4d2c978798b7"
+                  name="vector&lt;Champion&gt; champs"
+                  direction="In"
+                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -1231,6 +1392,369 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="417c028c-f24d-4a76-9918-729fe6a4b977"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="73bdd7f8-4012-46c4-94cc-41c591586731"
+            name="Draft"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="348fa15f-4355-4c89-a870-0a5c6798365b"
+            name="addpickedChamp"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4285bd78-77b7-4f1c-babf-44e3493daffa"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1ba16c56-dd59-47e7-932c-579e83d102d3"
+                  name="string&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6558dbdb-8da9-42ab-9cff-771875571e3c"
+            name="addbannedChamp"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6995a6c0-dd4e-4c1b-a74b-03d7c8542735"
+                  name="string&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4febedbd-47de-40f8-91d0-f114b83237e8"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a0e95507-f5f7-4fe4-86f2-d90a8d569009"
+            name="getpickedChamp"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="26d77d78-de3a-491b-9ecd-3bc7fafb1d61"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="9f8fd6e6-4e04-4b1e-b635-2bec0eecaaae"
+                      LastKnownName="vector&lt;string&gt;"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9e42f3ea-26b3-4f99-9d3a-a42b765bd48d"
+            name="getbannedChamp"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="701ce7da-d52f-4bfe-a58a-6f54f84a2c4c"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="f64f6a7b-d9ad-434b-87b7-d2e4313ab1c2"
+                      LastKnownName="vector&lt;string&gt;;"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d4824493-2838-4df4-9965-86c68a42d19d"
+            name="banChamps"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6f73e72e-7c25-49af-a457-34c9f4a4c5da"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ddc607be-64a0-4b4a-ae8f-81fef81ecee9"
+                      LastKnownName="virtual void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1db5bc83-7391-48b0-8a5c-c02ed84b26eb"
+            name="pickChamps"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e0a1c189-fb53-46b4-bfd9-a284f9f85115"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="ddc607be-64a0-4b4a-ae8f-81fef81ecee9"
+                      LastKnownName="virtual void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e032476a-60e9-4137-8681-e3107d63c54e"
+            name="compBan"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2a0fa964-e97c-4871-8a53-ef4431ab2178"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="242d7c1f-0b13-4643-b77d-c6253a50b001"
+            name="userBan"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ef33b48e-b5cb-44b2-aaca-211527dfcaa5"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="6564570d-6eac-4c19-be1c-89aeb7619404"
+            name="compPick"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ce69b70c-8313-46ac-938d-ed0d51c62f56"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e54b402f-deff-4b9c-b88a-aea5a81594a0"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="125bc34a-d64a-433c-aa24-c7b24de0b050"
+            name="checkPick"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f89eca45-8f14-4278-82ca-5c964bf822b8"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="5d286152-29d4-4053-9c14-0468859c906a"
+                      LastKnownName="bool"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e814c9cd-652a-4b94-9bda-4faf44292f6a"
+                  name="string&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ed7a7ad7-d73d-43fb-8cb9-8c6a0eee7f3a"
+            name="checkBan"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1f359c40-62e1-42db-ae0d-c134b395da5f"
+                  name="string&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e8b48ab7-fa34-4ea7-8561-76cb48120898"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="5d286152-29d4-4053-9c14-0468859c906a"
+                      LastKnownName="bool"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9c8dede4-ae4a-48aa-839d-7d6cab4c8ec4"
+            name="compChampPick"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b60a4bc9-e032-4bea-b1b4-ae48423fbb3f"
+                  name="int&amp;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="94cd89b0-9cc4-4300-8dd0-93ed2bc80874"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f47364bc-ff37-4625-9961-19a027f969d0"
+            name="score"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c0f64f8e-50ac-4988-aa6c-d775fedd03d0"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
@@ -1408,30 +1932,6 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="32e849c7-a810-4ad5-b37c-22310b1a45bd"
-            name="outputWinner"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="063c9ad9-507d-4e83-84a3-c1c94234eaea"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
-                      LastKnownName="void"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="b5fabab2-3756-4bf2-adaf-5a383fdf8fed"
             name="outputTeamPoints"
             isLeaf="false"
@@ -1452,31 +1952,6 @@
                       LastKnownLocation="ModelingProject1.uml" />
                   </type_NamedElement>
                 </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="ac4a54cb-24fb-47a6-b513-ad7dcb8eb188"
-            name="UserInput"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="49566d4d-5c60-4c21-b270-c547afb25fb4"
-                  name="Team red"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="23db12d5-ce6c-47f3-b28f-eb46172b92ea"
-                  name="Team blue"
-                  direction="In"
-                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -1532,7 +2007,6 @@
           <operation
             Id="098aa5b4-c500-46df-b1e8-194f8d69dd88"
             name="draftOuput"
-            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -1590,6 +2064,173 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="a86dbaae-54bd-452b-be63-391319714002"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9074eb5a-9458-4a84-bfc5-10b84964b8f3"
+            name="outputWinner"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4630dcc1-0abd-41ac-8da1-670e40667ef6"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="17d15d52-a745-48b9-af19-4021022064d9"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="833004ca-85c0-496a-84ee-0a1e639bbe36"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="23c30fee-37a2-4577-bb62-b41cb2c95488"
+            name="UserInput"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0d5720a2-105b-4453-9744-d95628b8afcc"
+            name="getDraftOutputFormat"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="40d373e7-b256-4d4d-99ec-b04ab8dc7c18"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="5714c486-1b6f-4b65-b661-9b2c795df3c4"
+                      LastKnownName="vector&lt;vector&lt;string&gt;&gt;;"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2d629175-7f8d-42b5-a68a-9926e5bda70d"
+            name="checkBanned"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="22634db9-eff9-45a6-9a8e-b11636acd801"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1f2dec77-7916-45e0-a2c7-09b5d8594467"
+            name="checkPicked"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6de899a3-e6fd-4ed6-b877-4bae63b4a90d"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7199a97e-b6a7-4135-ab5e-6cd393c064e8"
+            name="printMan"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a76007a5-f4e0-446b-955e-4a7b79884070"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="a7e1641d-c2b9-42b7-a4f3-85288d1ebe55"
+                      LastKnownName="void"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="57a06b4a-8b02-4ca8-bbf3-9ed432f4e382"
+            name="draftInputError"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="78eec5c9-5af7-4246-8a23-dd481c42da9e"
                   direction="Return"
                   isUnique="false">
                   <type_NamedElement>
@@ -1790,6 +2431,45 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="8d438b64-2c59-4dcb-a581-f4644e877925"
+            name="Team"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="dc3e558f-fb41-4819-b3bb-555af0507def"
+            name="getChamp"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ad2b7962-52e2-46c2-84bf-52191ba5207f"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="68cc3b3c-31e6-4df6-a6c2-c6092ded6112"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="52284938-22f2-46e7-9ace-12d92d1a127a"
+                      LastKnownName="string;"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1817,6 +2497,31 @@
       <undefinedType
         Id="9f8fd6e6-4e04-4b1e-b635-2bec0eecaaae"
         name="vector&lt;string&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="044ef420-b572-4cd8-abc8-fa9fce525909"
+        name="vector&lt; string&gt;;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="f64f6a7b-d9ad-434b-87b7-d2e4313ab1c2"
+        name="vector&lt;string&gt;;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ddc607be-64a0-4b4a-ae8f-81fef81ecee9"
+        name="virtual void" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="5d286152-29d4-4053-9c14-0468859c906a"
+        name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="5714c486-1b6f-4b65-b661-9b2c795df3c4"
+        name="vector&lt;vector&lt;string&gt;&gt;;" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

@@ -19,13 +19,6 @@ ChampDatabase::ChampDatabase()
 }
 
 
-ChampDatabase::~ChampDatabase()
-{
-	//delete _champSearch;
-	delete _ui;
-}
-
-
 // this function completes one iteration of a draft. 
 void ChampDatabase::completeADraft()
 {
@@ -33,13 +26,9 @@ void ChampDatabase::completeADraft()
 
 	allocateDraft(resp);
 	
-
-	// Call the constructor for a draft class that will iterate through one draft.
-	//call constructor for the type of draft from ui.
-	/*Draft d;
-
-	// add the arguments that the constructor calls for.
-	d();*/
+	delete _cd;
+	delete _ud;
+	delete _ui;
 }
 
 
@@ -158,4 +147,3 @@ void ChampDatabase::createChamps()
 
 vector<Champion> ChampDatabase::getChamps() { return _champs; }
 vector<string> ChampDatabase::getList() { return _listOfChampNames; }
-void ChampDatabase::debug() { cout << "Got here.\n"; }
