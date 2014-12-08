@@ -6,6 +6,7 @@
 #include <vector>
 #include <string>
 #include "Champion.h"
+//#include "ChampionSearch.h"
 #include "Team.h"
 
 using namespace std;
@@ -30,6 +31,7 @@ public:
 	void banChamps();
 	void pickChamps();
 	void outputChamp(Champion);
+	//void outputChamp(string&);
 	void outputTeamPoints(Team, Team);
 	void checkBanned();
 	void checkPicked();

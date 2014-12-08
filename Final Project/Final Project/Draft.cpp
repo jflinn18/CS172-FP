@@ -117,7 +117,7 @@ string Draft::compChampPick(int& i)
 
 	if (i < 4)
 	{
-		int index = _champSearch->search(_user.getChamp(i));
+		int index = _champSearch->search(_user.getChamp(i), 0, _champs.size());
 
 		c = _champs[index];
 
@@ -150,7 +150,7 @@ void Draft::score(){
 	{
 		for (unsigned int j = 0; j < _computer.getTeamChampNames().size(); j++)
 		{
-			index = _champSearch->search(_computer.getChamp(j));
+			index = _champSearch->search(_computer.getChamp(j), 0, _champs.size());
 
 			temp = _champs[index];
 			for (unsigned int k = 0; k < temp.getGoodCounter().size(); k++)
@@ -168,7 +168,7 @@ void Draft::score(){
 	{
 		for (unsigned int j = 0; j < _user.getTeamChampNames().size(); j++)
 		{
-			index = _champSearch->search(_user.getChamp(j));
+			index = _champSearch->search(_user.getChamp(j), 0, _champs.size());
 
 			temp = _champs[index];
 			for (unsigned int k = 0; k < temp.getGoodCounter().size(); k++)

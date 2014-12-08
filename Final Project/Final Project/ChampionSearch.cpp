@@ -15,12 +15,26 @@ ChampionSearch::~ChampionSearch(){}
 
 
 // searches for the champion name that is given to the function
-int ChampionSearch::search(string &name)
+//int ChampionSearch::search(string &name)
+//{
+//	for (unsigned int i = 0; i < _champs.size(); i++)
+//	{
+//		if (_champs[i] == name)
+//			return i; // returns the index of where the champion can be found. 
+//	}
+//		return -1; // to say that it was not found
+//}
+
+int ChampionSearch::search(string &name, int low, int high)
 {
-	for (unsigned int i = 0; i < _champs.size(); i++)
-	{
-		if (_champs[i] == name)
-			return i; // returns the index of where the champion can be found. 
-	}
-		return -1; // to say that it was not found
+	if (low > high)
+		return -low-1;
+
+	int mid = (low + high) / 2;
+	if (name < _champs[mid])
+		search(name, low, mid-1);
+	else if (name == _champs[mid])
+		return mid;
+	else
+		search(name, mid+1, high);
 }

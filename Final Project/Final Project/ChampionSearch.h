@@ -20,7 +20,8 @@ public:
 	ChampionSearch(vector<string>&);
 	~ChampionSearch();
 
-	int search(string&);
+	//int search(string&);
+	int search(string&, int, int);
 };
 
 #endif

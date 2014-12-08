@@ -40,7 +40,7 @@ void UserInput::checkPicked(){
 // asks the user which type of draft they want to do
 string UserInput::whatDraft()
 {
-	cout << "At any time, write '-man' see the different commands for this program.\n";
+	cout << "At any time, write '-help' see the different commands for this program.\n";
 	cout << "Which draft would you like to do? \n";
 	getInput();
 
@@ -154,6 +154,59 @@ void UserInput::outputChamp(Champion c)
 }
 
 
+//void UserInput::outputChamp(string &name)
+//{
+//	vector<string> bad; // makes a vector to copy data into from c
+//	vector<string> good; // makes a vector to copy data into from c
+//	vector<string> pos; // makes a vector to copy data into from c
+//
+//	bad = c.getBadCounter(); // copies data from c
+//	good = c.getGoodCounter(); // copies data from c
+//	pos = c.getPositions(); // copies data from c
+//
+//	cout << setw(30) << "Bad counters: " << setw(30) << "Good counters: " << endl;
+//
+//
+//	if (bad.size() > good.size()) // conditional to make sure you won't run outside of the vector
+//	{
+//		for (unsigned int i = 0; i < bad.size(); i++)
+//		{
+//			if (i > good.size())
+//				cout << setw(30) << bad[i] << endl; // formats output
+//			else
+//				cout << setw(30) << bad[i] << setw(30) << good[i] << endl; // formats output
+//		}
+//	}
+//	else if (bad.size() < good.size()) // conditional to make sure you won't run outside of the vector
+//	{
+//		for (unsigned int i = 0; i > good.size(); i++)
+//		{
+//			if (i > bad.size())
+//				cout << setw(60) << good[i] << endl; // formats output
+//			else
+//				cout << setw(30) << bad[i] << setw(30) << good[i] << endl; // formats output
+//		}
+//	}
+//	else
+//	{
+//		for (unsigned int i = 0; i < bad.size(); i++)
+//			cout << setw(30) << bad[i] << setw(30) << good[i]; // formats output
+//	}
+//
+//
+//	cout << "\nPrimary Role: " << c.getPrimaryRole() << endl; // prints out the primary role of the champion
+//
+//	if (!(c.getSecondaryRole() == "na"))
+//		cout << "Secondary Role: " << c.getSecondaryRole() << endl; // prints out the secondary role of the champion if it has one
+//
+//	cout << endl; // asthetics
+//
+//	for (unsigned int i = 0; i < pos.size(); i++)
+//		cout << pos[i] << endl; // prints out the positions of the champion
+//}
+
+
+
 // this provides a chart like interface for the draft to keep track of what has been banned and what has been picked. 
 void UserInput::draftOutput()
 {
@@ -193,6 +246,8 @@ void UserInput::outputWinner(int user, int computer)
 {
 	if (user > computer)
 		cout << "Good job! Your team has the pick advantage\n"; // the user's team has the advantage.
+	else if (user == computer)
+		cout << "It's a tie. It comes down to skill.\n";
 	else
 	{
 		cout << "I'm sorry, the other team has the pick advantage.\n"; // the computer's team has the advantage.
@@ -207,6 +262,8 @@ string UserInput::getInput()
 {
 	cout << ">>: "; 
 	getline(cin, resp);
+
+	checkResp();
 
 	return resp;
 }
@@ -232,7 +289,7 @@ void UserInput::printMan()
 
 	cout << endl;
 
-	cout << "-q to exit -man\n";
+	cout << "-q to exit\n";
 
 	//cout << "-l: \n\t Used after the type of draft to choose the learning draft" << endl;
 	//cout << "\t<type_of_draft> <-l>" << endl;
@@ -248,15 +305,15 @@ void UserInput::checkResp()
 	if (resp == "-x")
 		exit(0);
 	
-	if (resp == "-man")
+	if (resp == "-help")
 		printMan();
 
 	if (resp == "-q")
 		clearWindow();
 
+	//if (resp.find("-s") < resp.size())
+	//	outputChamp(resp.replace(resp.size()-2, ""));
 
-	//if (resp.find("-l") > 0)
-		// call a special draft
 
 	//getInput();
 }
