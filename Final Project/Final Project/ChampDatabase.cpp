@@ -7,13 +7,14 @@ using namespace std;
 ChampDatabase::ChampDatabase()
 {
 	// calls the function that will go through a draft.
-	_ui = new UserInput;
 	createChampList(); // calls the function that creates the list of names for the champion
 
 	//setChampSearch();
 	//_champSearch = new ChampionSearch(_listOfChampNames);
 
 	createChamps(); // call the funtion that creates the vector of champion objects
+
+	_ui = new UserInput(_listOfChampNames, _champs);
 	completeADraft();
 	
 }

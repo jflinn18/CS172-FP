@@ -23,7 +23,7 @@ void CompDraft::pickChamps()
 
 void CompDraft::banChamps()
 {
-	_ui.draftOutput();
+	_ui->draftOutput();
 	for (int i = 0; i < 3; i++){
 		compBan();
 		userBan();

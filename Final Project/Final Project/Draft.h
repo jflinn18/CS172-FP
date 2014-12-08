@@ -19,7 +19,7 @@ class Draft
 protected:
 	Team _user; // maybe Team user and Team computer
 	Team _computer;
-	UserInput _ui;
+	UserInput *_ui;
 	vector<string> pickedChamps; // this stores all of the champions picked so far in the draft (for both sides)
 	vector<string> bannedChamps; //vector of all banned champs.
 	vector<Champion> _champs;

@@ -5,7 +5,7 @@ using namespace std;
 
 
 
-UserInput::UserInput()
+UserInput::UserInput(vector<string> listOfChamps, vector<Champion> champs)
 {
 	vector<vector<string>> temp(7);
 
@@ -25,6 +25,8 @@ UserInput::UserInput()
 	}
 
 	draftOutputFormat = temp;
+	_champs = champs;
+	_listChamps = listOfChamps;
 } 
 
 void UserInput::checkBanned(){
@@ -102,108 +104,65 @@ void UserInput::updatepicks(vector<string> user, vector<string> computer)
 
 
 // This outputs all of the Data in that specific champion object
-void UserInput::outputChamp(Champion c)
+void UserInput::outputChamp(string &name)
 {
+	for (int i = 0; i < _listChamps.size(); i++)
+	{
+		if (name == _listChamps[i])
+		{
+			c = new Champion(_champs[i]);
+			break;
+		}
+	}
+
+	
 	vector<string> bad; // makes a vector to copy data into from c
 	vector<string> good; // makes a vector to copy data into from c
 	vector<string> pos; // makes a vector to copy data into from c
 
-	bad = c.getBadCounter(); // copies data from c
-	good = c.getGoodCounter(); // copies data from c
-	pos = c.getPositions(); // copies data from c
+	bad = c->getBadCounter(); // copies data from c
+	good = c->getGoodCounter(); // copies data from c
+	pos = c->getPositions(); // copies data from c
 
-	cout << setw(30) << "Bad counters: " << setw(30) << "Good counters: " << endl;
+	cout << endl;
+	cout << setw(20) << "Bad counters: " << setw(20) << "Good counters: " << endl;
 
+	vector<vector<string>> champsOutputFormat(6);
 
-	if (bad.size() > good.size()) // conditional to make sure you won't run outside of the vector
+	for (int i = 0; i < 6; i++)
+		champsOutputFormat[i] = vector<string>(2);
+
+	for (int i = 0; i < 6; i++)
 	{
-		for (unsigned int i = 0; i < bad.size(); i++)
-		{
-			if (i > good.size())
-				cout << setw(30) << bad[i] << endl; // formats output
-			else
-				cout << setw(30) << bad[i] << setw(30) << good[i] << endl; // formats output
-		}
-	}
-	else if (bad.size() < good.size()) // conditional to make sure you won't run outside of the vector
-	{
-		for (unsigned int i = 0; i > good.size(); i++)
-		{
-			if (i > bad.size())
-				cout << setw(60) << good[i] << endl; // formats output
-			else
-				cout << setw(30) << bad[i] << setw(30) << good[i] << endl; // formats output
-		}
-	}
-	else
-	{
-		for (unsigned int i = 0; i < bad.size(); i++)
-			cout << setw(30) << bad[i] << setw(30) << good[i]; // formats output
+		for (int j = 0; j < 2; j++)
+			champsOutputFormat[i][j] = "-----------";
 	}
 
+	for (int i = 0; i < bad.size() - 1; i++)
+		champsOutputFormat[i][0] = bad[i];
+	for (int i = 0; i < good.size() - 1; i++)
+		champsOutputFormat[i][1] = good[i];
 
-	cout << "\nPrimary Role: " << c.getPrimaryRole() << endl; // prints out the primary role of the champion
 
-	if (!(c.getSecondaryRole() == "na"))
-		cout << "Secondary Role: " << c.getSecondaryRole() << endl; // prints out the secondary role of the champion if it has one
+	for (int i = 0; i < 6; i++)
+	{
+		for (int j = 0; j < 2; j++)
+			cout << setw(20) << champsOutputFormat[i][j];
+		cout << endl;
+
+	}
+
+
+	cout << "\nPrimary Role: " << c->getPrimaryRole() << endl; // prints out the primary role of the champion
+
+	if (!(c->getSecondaryRole() == "na"))
+		cout << "Secondary Role: " << c->getSecondaryRole() << endl; // prints out the secondary role of the champion if it has one
 
 	cout << endl; // asthetics
 
 	for (unsigned int i = 0; i < pos.size(); i++)
 		cout << pos[i] << endl; // prints out the positions of the champion
 }
-
-
-//void UserInput::outputChamp(string &name)
-//{
-//	vector<string> bad; // makes a vector to copy data into from c
-//	vector<string> good; // makes a vector to copy data into from c
-//	vector<string> pos; // makes a vector to copy data into from c
-//
-//	bad = c.getBadCounter(); // copies data from c
-//	good = c.getGoodCounter(); // copies data from c
-//	pos = c.getPositions(); // copies data from c
-//
-//	cout << setw(30) << "Bad counters: " << setw(30) << "Good counters: " << endl;
-//
-//
-//	if (bad.size() > good.size()) // conditional to make sure you won't run outside of the vector
-//	{
-//		for (unsigned int i = 0; i < bad.size(); i++)
-//		{
-//			if (i > good.size())
-//				cout << setw(30) << bad[i] << endl; // formats output
-//			else
-//				cout << setw(30) << bad[i] << setw(30) << good[i] << endl; // formats output
-//		}
-//	}
-//	else if (bad.size() < good.size()) // conditional to make sure you won't run outside of the vector
-//	{
-//		for (unsigned int i = 0; i > good.size(); i++)
-//		{
-//			if (i > bad.size())
-//				cout << setw(60) << good[i] << endl; // formats output
-//			else
-//				cout << setw(30) << bad[i] << setw(30) << good[i] << endl; // formats output
-//		}
-//	}
-//	else
-//	{
-//		for (unsigned int i = 0; i < bad.size(); i++)
-//			cout << setw(30) << bad[i] << setw(30) << good[i]; // formats output
-//	}
-//
-//
-//	cout << "\nPrimary Role: " << c.getPrimaryRole() << endl; // prints out the primary role of the champion
-//
-//	if (!(c.getSecondaryRole() == "na"))
-//		cout << "Secondary Role: " << c.getSecondaryRole() << endl; // prints out the secondary role of the champion if it has one
-//
-//	cout << endl; // asthetics
-//
-//	for (unsigned int i = 0; i < pos.size(); i++)
-//		cout << pos[i] << endl; // prints out the positions of the champion
-//}
 
 
 
@@ -311,8 +270,13 @@ void UserInput::checkResp()
 	if (resp == "-q")
 		clearWindow();
 
-	//if (resp.find("-s") < resp.size())
-	//	outputChamp(resp.replace(resp.size()-2, ""));
+	if (resp.find("-s") < resp.size())
+	{
+		for (int i = 0; i < 3; i++)
+			resp.pop_back();
+		outputChamp(resp);
+		getInput();
+	}
 
 
 	//getInput();

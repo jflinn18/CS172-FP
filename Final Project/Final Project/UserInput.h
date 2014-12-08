@@ -17,21 +17,25 @@ class UserInput
 private:
 	string resp;
 	vector<vector<string>> draftOutputFormat;
+	vector<string> _listChamps;
+	vector<Champion> _champs;
+
+	Champion *c;
 
 	void checkResp();
 	void outputWinner(int, int);
 
 
 public:
-	UserInput();
+	UserInput(vector<string>, vector<Champion>);
 	string whatDraft();
 	string getInput();
 	vector<vector<string>> getDraftOutputFormat();
 
 	void banChamps();
 	void pickChamps();
-	void outputChamp(Champion);
-	//void outputChamp(string&);
+	//void outputChamp(Champion);
+	void outputChamp(string&);
 	void outputTeamPoints(Team, Team);
 	void checkBanned();
 	void checkPicked();

@@ -8,7 +8,7 @@ Draft::Draft(vector<string> listchamps, vector<Champion> champs)
 	_listChampNames = listchamps;
 	_champs = champs;
 	_champSearch = new ChampionSearch(listchamps);
-
+	_ui = new UserInput(_listChampNames, _champs);
 }
 
 Draft::~Draft()
@@ -35,24 +35,24 @@ void Draft::compBan()
 		banned = _listChampNames[k];
 	}
 	addbannedChamps(banned);
-	_ui.updatebans(bannedChamps);
+	_ui->updatebans(bannedChamps);
 }
 
 void Draft::userBan()
 {
 	string banned = "";
-	_ui.banChamps();
-	banned = _ui.getInput();
+	_ui->banChamps();
+	banned = _ui->getInput();
 
 
 	while (!checkBan(banned)){ //checks that the champion hasn't been banned already.
-		_ui.checkBanned();
-		banned = _ui.getInput();	//check again????
+		_ui->checkBanned();
+		banned = _ui->getInput();	//check again????
 	}
 
 
 	addbannedChamps(banned);
-	_ui.updatebans(bannedChamps);
+	_ui->updatebans(bannedChamps);
 }
 
 bool Draft::checkBan(string& ban){
@@ -78,18 +78,18 @@ bool Draft::checkPick(string& pick){
 
 void Draft::userPick(){
 	string picked = "";
-	_ui.pickChamps();
-	picked = _ui.getInput();
+	_ui->pickChamps();
+	picked = _ui->getInput();
 	
 
 	while (!checkPick(picked) || !checkBan(picked)){ //checks that the champion hasn't been picked or banned already.
-		_ui.checkPicked();
-		picked = _ui.getInput();	//check again????
+		_ui->checkPicked();
+		picked = _ui->getInput();	//check again????
 	}
 
 	addpickedChamps(picked);
 	_user.addTeamChampNames(picked);
-	_ui.updatepicks(_user.getTeamChampNames(), _computer.getTeamChampNames());
+	_ui->updatepicks(_user.getTeamChampNames(), _computer.getTeamChampNames());
 }
 
 
@@ -107,7 +107,7 @@ void Draft::compPick(int i){
 
 	addpickedChamps(picked);
 	_computer.addTeamChampNames(picked);
-	_ui.updatepicks(_user.getTeamChampNames(), _computer.getTeamChampNames());
+	_ui->updatepicks(_user.getTeamChampNames(), _computer.getTeamChampNames());
 }
 
 
@@ -181,5 +181,5 @@ void Draft::score(){
 		}
 	}
 
-	_ui.outputTeamPoints(_user, _computer);
+	_ui->outputTeamPoints(_user, _computer);
 }

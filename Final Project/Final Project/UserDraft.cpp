@@ -25,7 +25,7 @@ void UserDraft::pickChamps()
 
 void UserDraft::banChamps()
 {
-	_ui.draftOutput();
+	_ui->draftOutput();
 	//_ui.banChamps();
 	for (int i = 0; i < 3; i++){
 		userBan();
