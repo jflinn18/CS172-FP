@@ -45,6 +45,11 @@ void Draft::userBan()
 	banned = _ui.getInput();
 
 
+	while (!checkBan(banned)){ //checks that the champion hasn't been banned already.
+		_ui.checkBanned();
+		banned = _ui.getInput();	//check again????
+	}
+
 
 	addbannedChamps(banned);
 	_ui.updatebans(bannedChamps);
@@ -64,10 +69,10 @@ bool Draft::checkPick(string& pick){
 	for (unsigned int i = 0; i < pickedChamps.size(); i++){ //checks that the champion hasn't been picked already.
 
 		if (pickedChamps[i] == pick){
-			return true;
+			return false;
 		}
-		else return false;
 	}
+	return true;
 }
 
 //void Draft::banChamps(){}
@@ -80,7 +85,7 @@ void Draft::userPick(){
 	picked = _ui.getInput();
 	
 
-	while (!checkPick(picked) && !checkBan(picked)){ //checks that the champion hasn't been banned already.
+	while (!checkPick(picked) || !checkBan(picked)){ //checks that the champion hasn't been picked or banned already.
 		_ui.checkPicked();
 		picked = _ui.getInput();	//check again????
 	}
@@ -95,10 +100,11 @@ void Draft::compPick(int i){
 	int k = rand() % 121;
 
 	string picked = "";
-	picked = _listChampNames[k];
+	picked = compChampPick(i);
+	//picked = _listChampNames[k];
 
 
-	while (!checkPick(picked) && !checkBan(picked)){ //checks that the champion hasn't been picked already.
+	while (!checkPick(picked) || !checkBan(picked)){ //checks that the champion hasn't been picked already.
 		picked = compChampPick(i);
 	}
 
@@ -112,13 +118,13 @@ string Draft::compChampPick(int& i)
 {
 	Champion c;
 
-	if (i > 3)
+	if (i < 4)
 	{
 		int index = _champSearch->search(_user.getChamp(i));
 
 		c = _champs[index];
 
-		int r = rand() % c.getGoodCounter().size();
+		int r = rand() % ( c.getGoodCounter().size() - 1 );
 
 		return c.getGoodChamp(r);
 		// check if they have been picked or banned???
@@ -154,7 +160,7 @@ void Draft::score(){
 			{
 				if (_user.getChamp(j) == temp.getGoodChamp(k))
 				{
-					_user.setPoints(1);
+					_user.setPoints();
 				}
 			}
 		}
@@ -172,7 +178,7 @@ void Draft::score(){
 			{
 				if (_computer.getChamp(j) == temp.getGoodChamp(k))
 				{
-					_computer.setPoints(1);
+					_computer.setPoints();
 				}
 			}
 		}

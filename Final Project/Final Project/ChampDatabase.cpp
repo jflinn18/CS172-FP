@@ -83,6 +83,8 @@ void ChampDatabase::addChamp(string &champName)
 			c.setGoodCounter(s);
 		}
 
+		s = "empty";
+
 		while (!(s == "")) // reads and adds data into c.badCounters until the paragraph break
 		{
 			getline(filein, s);

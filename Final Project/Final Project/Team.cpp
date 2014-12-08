@@ -11,7 +11,7 @@ vector<string> Team::getTeamChampNames() { return _teamChampNames; }
 string Team::getChamp(int i){ return _teamChampNames[i]; }
 
 
-void Team::setPoints(int pts) { _points = pts; }
+void Team::setPoints() { _points++; }
 
 
 void Team::addTeamChampNames(string &champ)

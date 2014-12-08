@@ -16,7 +16,7 @@ public:
 	void addTeamChampNames(string&);
 	int getPoints();
 	vector<string> getTeamChampNames();
-	void setPoints(int);
+	void setPoints();
 	string getChamp(int);
 
 };
