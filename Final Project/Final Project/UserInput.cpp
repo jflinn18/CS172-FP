@@ -241,21 +241,21 @@ void UserInput::printMan()
 	cout << "User Draft - where the user picks the counters.\n <User Draft> / <user draft>\n\n\n";
 
 	cout << "-x: \n\t Exits the program" << endl;
-
 	cout << endl;
 
 	cout << "-man: \n\t Shows the user manual" << endl;
-
 	cout << endl;
 
-	cout << "-q to exit\n";
+	cout << "-clear: \n\t Clears the screen back to only the Champion Draft" << endl;
+	cout << endl;
+
+	cout << "<-q> to exit\n";
 
 	//cout << "-l: \n\t Used after the type of draft to choose the learning draft" << endl;
 	//cout << "\t<type_of_draft> <-l>" << endl;
 
 	getInput();
 	checkResp();
-	getInput();
 }
 
 // checks to make sure that the user doesn't want something that the computer isn't asking for. 
@@ -268,7 +268,17 @@ void UserInput::checkResp()
 		printMan();
 
 	if (resp == "-q")
+	{
 		clearWindow();
+		getInput();
+	}
+
+	if (resp == "-clear")
+	{
+		clearWindow();
+		draftOutput();
+		getInput();
+	}
 
 	if (resp.find("-s") < resp.size())
 	{
