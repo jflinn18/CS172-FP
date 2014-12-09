@@ -257,9 +257,6 @@ void UserInput::printMan()
 	cout << "-clear: \n\t Clears the screen back to only the Champion Draft" << endl;
 	cout << endl;
 
-	cout << "-s: \n\t Outputs the data on the champion." << endl;
-	cout << endl;
-
 	cout << "<-q> to exit\n";
 
 	//cout << "-l: \n\t Used after the type of draft to choose the learning draft" << endl;
