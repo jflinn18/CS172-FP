@@ -1,18 +1,13 @@
 #include "UserDraft.h"
 
 using namespace std;
-
+//creates a draft in which the user gets the first pick
 UserDraft::UserDraft(vector<string> listChamps, vector<Champion> champs) : Draft(listChamps, champs)
 { 
 	executeDraft();
 }
 
-//UserDraft::~UserDraft()
-//{
-//	delete _champSearch;
-//	delete _ui;
-//}
-
+//starts picking champions, with the user first
 void UserDraft::pickChamps()
 {
 	//_ui.pickChamps();
@@ -28,7 +23,7 @@ void UserDraft::pickChamps()
 	userPick();
 	compPick(3, 4);
 }
-
+//starts banning champions, with the user banning first
 void UserDraft::banChamps()
 {
 	_ui->draftOutput();

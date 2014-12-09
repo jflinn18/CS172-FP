@@ -4,7 +4,7 @@ using namespace std;
 
 
 
-
+//
 UserInput::UserInput(vector<string> listOfChamps, vector<Champion> champs)
 {
 	vector<vector<string>> temp(7);
@@ -30,17 +30,18 @@ UserInput::UserInput(vector<string> listOfChamps, vector<Champion> champs)
 
 	c = NULL;
 } 
-
+//decunstructor
 UserInput::~UserInput()
 {
 	if (c == NULL)
 		delete c;
 }
-
+//prompts user
 void UserInput::checkBanned(){
 	cout << "Champion already banned. Ban a different champ: \n";
 
 }
+//prompts user
 void UserInput::checkPicked(){
 	cout << "Champion already picked. Pick a different champ: \n";
 }
@@ -199,7 +200,7 @@ void UserInput::draftOutput()
 	}
 }
 
-
+//displays team points
 void UserInput::outputTeamPoints(Team user, Team computer)
 {
 	cout << "User's team points: " << user.getPoints() << endl;;  // prints the team points for user
@@ -208,7 +209,7 @@ void UserInput::outputTeamPoints(Team user, Team computer)
 	outputWinner(user.getPoints(), computer.getPoints());
 }
 
-
+//displays results
 void UserInput::outputWinner(int user, int computer)
 {
 	if (user > computer)
@@ -235,13 +236,13 @@ string UserInput::getInput()
 	return resp;
 }
 
-
+//clears the screen
 void UserInput::clearWindow()
 {
 	system("cls");
 }
 
-
+// a manual for users who aren't familiar with the program
 void UserInput::printMan()
 {
 	cout << "\n\nThere are two types of drafts:\n" << endl;
