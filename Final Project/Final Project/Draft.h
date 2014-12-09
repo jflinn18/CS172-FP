@@ -50,7 +50,7 @@ public:
 	bool checkPick(string&);
 	bool checkBan(string&);
 	//bool checkPos(string&); //need for compPick. check that the champ fulfills a certain position.
-	string compChampPick(int&, int&);
+	string compChampPick(int&, int&, string);
 
 	void score(); //need to develope scoring techniques
 };

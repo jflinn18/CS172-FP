@@ -50,7 +50,7 @@ void UserInput::checkPicked(){
 // asks the user which type of draft they want to do
 string UserInput::whatDraft()
 {
-	cout << "At any time, write '-help' see the different commands for this program.\n";
+	cout << "At any time, write '-help' to see the different commands for this program.\n";
 	cout << "Which draft would you like to do? \n";
 	getInput();
 
@@ -251,7 +251,7 @@ void UserInput::printMan()
 	cout << "-x: \n\t Exits the program" << endl;
 	cout << endl;
 
-	cout << "-man: \n\t Shows the user manual" << endl;
+	cout << "-help: \n\t Shows the user manual" << endl;
 	cout << endl;
 
 	cout << "-clear: \n\t Clears the screen back to only the Champion Draft" << endl;

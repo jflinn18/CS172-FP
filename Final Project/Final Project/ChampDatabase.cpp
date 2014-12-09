@@ -47,7 +47,7 @@ void ChampDatabase::allocateDraft(string& resp)
 {
 	if (resp == "Computer Draft" || resp == "computer draft")
 		_cd = new CompDraft(_listOfChampNames, _champs);
-	if (resp == "User Draft" || resp == "user draft")
+	else if (resp == "User Draft" || resp == "user draft")
 		_ud = new UserDraft(_listOfChampNames, _champs);
 	else
 		_ui->draftInputError();

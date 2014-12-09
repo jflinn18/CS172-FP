@@ -107,12 +107,12 @@ void Draft::compPick(int i, int j){
 	int k = rand() % 121;
 
 	string picked = "";
-	picked = compChampPick(i, j);
+	picked = compChampPick(i, j, picked);
 	//picked = _listChampNames[k];
 
 
 	while (!checkPick(picked) || !checkBan(picked)){ //checks that the champion hasn't been picked already.
-		picked = compChampPick(i, j);
+		picked = compChampPick(i, j, picked);
 	}
 
 	addpickedChamps(picked);
@@ -121,7 +121,7 @@ void Draft::compPick(int i, int j){
 }
 
 
-string Draft::compChampPick(int& counter, int& pos)
+string Draft::compChampPick(int& counter, int& pos, string picked)
 {
 	Champion champIn;
 	Champion champOut;
@@ -143,7 +143,7 @@ string Draft::compChampPick(int& counter, int& pos)
 
 			for (int j = 0; j < positions.size() - 1; j++)
 			{
-				if (positions[j] == compPositions[pos])
+				if (positions[j] == compPositions[pos] && !checkPick(picked) || !checkBan(picked))
 					return champOut.getName();
 			}
 		}
