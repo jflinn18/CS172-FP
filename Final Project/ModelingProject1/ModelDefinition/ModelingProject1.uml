@@ -956,6 +956,25 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="44b1f82d-2d2b-408b-9c38-81588b4f6814"
+            name="ChampDatabase"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0da322f0-a9e0-4e47-b874-a420d424012a"
+                  name=");("
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1259,7 +1278,7 @@
         <ownedAttributesInternal>
           <property
             Id="2fb0c0ed-896e-4dcd-a9d1-354086a2c2af"
-            name="UserInput ui;"
+            name="UserInput *ui;"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -1809,6 +1828,42 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="2609d168-692f-4f8c-bd2d-f2d5bbbbf96a"
+            name="vector&lt;string&gt; listChamps"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="2cb890ad-9706-49ca-85e6-515640f29a4c"
+            name="Champion *c"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9d5e7563-21f9-4ecc-b359-14e5e5a5f9fb"
+            name="vector&lt;Champion&gt; _champs;"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -2122,7 +2177,24 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false" />
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="92346ea3-a705-44d5-8c75-a8940dd0fe7d"
+                  name="vector&lt;string&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6229d4d9-2f64-4efd-a70d-37eeb3e7c57c"
+                  name="vector&lt;Champion&gt;"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
           <operation
             Id="0d5720a2-105b-4453-9744-d95628b8afcc"
             name="getDraftOutputFormat"
@@ -2243,6 +2315,15 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="0e9deea4-64b4-4560-aef2-abc99797a2e7"
+            name="UserInput"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>

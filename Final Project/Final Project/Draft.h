@@ -25,6 +25,7 @@ protected:
 	vector<Champion> _champs;
 	vector<string> _listChampNames;
 	ChampionSearch *_champSearch;
+	vector<string> compPositions;
 public:
 	Draft(vector<string>, vector<Champion>);
 	~Draft();
@@ -45,11 +46,11 @@ public:
 	void compBan();
 	void userBan();
 	void userPick();
-	void compPick(int);
+	void compPick(int, int);
 	bool checkPick(string&);
 	bool checkBan(string&);
 	//bool checkPos(string&); //need for compPick. check that the champ fulfills a certain position.
-	string compChampPick(int&);
+	string compChampPick(int&, int&);
 
 	void score(); //need to develope scoring techniques
 };

@@ -28,6 +28,7 @@ private:
 
 public:
 	ChampDatabase();
+	~ChampDatabase();
 	void completeADraft();
 
 	vector<Champion> getChamps();

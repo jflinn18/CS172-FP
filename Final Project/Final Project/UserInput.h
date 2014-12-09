@@ -28,6 +28,7 @@ private:
 
 public:
 	UserInput(vector<string>, vector<Champion>);
+	~UserInput();
 	string whatDraft();
 	string getInput();
 	vector<vector<string>> getDraftOutputFormat();

@@ -6,6 +6,10 @@ using namespace std;
 
 ChampDatabase::ChampDatabase()
 {
+	_cd = NULL;
+	_ud = NULL;
+	_ui = NULL;
+
 	// calls the function that will go through a draft.
 	createChampList(); // calls the function that creates the list of names for the champion
 
@@ -19,6 +23,16 @@ ChampDatabase::ChampDatabase()
 	
 }
 
+ChampDatabase::~ChampDatabase()
+{
+	if (_cd == NULL)
+		delete _cd;
+	if (_ud == NULL)
+		delete _ud;
+	if (_ui == NULL)
+		delete _ui;
+}
+
 
 // this function completes one iteration of a draft. 
 void ChampDatabase::completeADraft()
@@ -26,10 +40,6 @@ void ChampDatabase::completeADraft()
 	string resp = _ui->whatDraft();
 
 	allocateDraft(resp);
-	
-	delete _cd;
-	delete _ud;
-	delete _ui;
 }
 
 

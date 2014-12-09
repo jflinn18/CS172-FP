@@ -28,7 +28,7 @@ ChampionSearch::~ChampionSearch(){}
 int ChampionSearch::search(string &name, int low, int high)
 {
 	if (low > high)
-		return -low-1;
+		return -1;
 
 	int mid = (low + high) / 2;
 	if (name < _champs[mid])

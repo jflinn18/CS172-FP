@@ -13,6 +13,7 @@ class CompDraft : public Draft
 {
 public:
 	CompDraft(vector<string>, vector<Champion>);
+	//~CompDraft();
 	void pickChamps();
 	void banChamps();
 };

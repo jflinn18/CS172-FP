@@ -7,20 +7,26 @@ UserDraft::UserDraft(vector<string> listChamps, vector<Champion> champs) : Draft
 	executeDraft();
 }
 
+//UserDraft::~UserDraft()
+//{
+//	delete _champSearch;
+//	delete _ui;
+//}
+
 void UserDraft::pickChamps()
 {
 	//_ui.pickChamps();
 
 	userPick();
-	compPick(0);
-	compPick(7);
+	compPick(0, 0);
+	compPick(7, 1);
 	userPick();
 	userPick();
-	compPick(1);
-	compPick(2);
+	compPick(1, 2);
+	compPick(2, 3);
 	userPick();
 	userPick();
-	compPick(3);
+	compPick(3, 4);
 }
 
 void UserDraft::banChamps()

@@ -4,16 +4,26 @@
 
 Draft::Draft(vector<string> listchamps, vector<Champion> champs)
 {
+	_ui = NULL;
+	_champSearch = NULL;
+
 	srand(time(NULL));
 	_listChampNames = listchamps;
 	_champs = champs;
 	_champSearch = new ChampionSearch(listchamps);
 	_ui = new UserInput(_listChampNames, _champs);
+
+	compPositions = { "Top", "Adc", "Support", "Mid", "Jungle" };
+
+
 }
 
 Draft::~Draft()
 {
-	delete _champSearch;
+	if (_champSearch == NULL)
+		delete _champSearch;
+	if (_ui == NULL)
+		delete _ui;
 }
 
 
@@ -93,16 +103,16 @@ void Draft::userPick(){
 }
 
 
-void Draft::compPick(int i){
+void Draft::compPick(int i, int j){
 	int k = rand() % 121;
 
 	string picked = "";
-	picked = compChampPick(i);
+	picked = compChampPick(i, j);
 	//picked = _listChampNames[k];
 
 
 	while (!checkPick(picked) || !checkBan(picked)){ //checks that the champion hasn't been picked already.
-		picked = compChampPick(i);
+		picked = compChampPick(i, j);
 	}
 
 	addpickedChamps(picked);
@@ -111,26 +121,51 @@ void Draft::compPick(int i){
 }
 
 
-string Draft::compChampPick(int& i)
+string Draft::compChampPick(int& counter, int& pos)
 {
-	Champion c;
+	Champion champIn;
+	Champion champOut;
 
-	if (i < 4)
+	vector<string> positions;
+
+	if (counter < 4)
 	{
-		int index = _champSearch->search(_user.getChamp(i), 0, _champs.size());
+		int index = _champSearch->search(_user.getChamp(counter), 0, _champs.size());
 
-		c = _champs[index];
+		champIn = _champs[index];
 
-		int r = rand() % ( c.getGoodCounter().size() - 1 );
+		for (int i = 0; i < champIn.getGoodCounter().size() - 1; i++)
+		{
+			index = _champSearch->search(champIn.getGoodChamp(i), 0, _champs.size());
+			champOut = _champs[index];
 
-		return c.getGoodChamp(r);
-		// check if they have been picked or banned???
+			positions = champOut.getPositions();
+
+			for (int j = 0; j < positions.size() - 1; j++)
+			{
+				if (positions[j] == compPositions[pos])
+					return champOut.getName();
+			}
+		}
 	}
-	else
+
+	int r = rand() % 121;
+
+	for (;;)
 	{
-		int r = rand() % 121;
-		return _listChampNames[r];
+		r = rand() % 121;
+		champOut = _champs[r];
+
+		positions = champOut.getPositions();
+
+		for (int j = 0; j < positions.size() - 1; j++)
+		{
+			if (positions[j] == compPositions[pos])
+				return champOut.getName();
+		}
 	}
+
+	return _listChampNames[r];
 }
 
 
@@ -138,7 +173,6 @@ void Draft::executeDraft(){
 	banChamps();
 	pickChamps();
 	score();
-
 }
 
 

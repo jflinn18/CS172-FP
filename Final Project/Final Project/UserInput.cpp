@@ -27,7 +27,15 @@ UserInput::UserInput(vector<string> listOfChamps, vector<Champion> champs)
 	draftOutputFormat = temp;
 	_champs = champs;
 	_listChamps = listOfChamps;
+
+	c = NULL;
 } 
+
+UserInput::~UserInput()
+{
+	if (c == NULL)
+		delete c;
+}
 
 void UserInput::checkBanned(){
 	cout << "Champion already banned. Ban a different champ: \n";
