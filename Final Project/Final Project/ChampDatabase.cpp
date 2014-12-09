@@ -6,6 +6,7 @@ using namespace std;
 
 ChampDatabase::ChampDatabase()
 {
+	// sets all of our pointers in ChampDatabase to NULL
 	_cd = NULL;
 	_ud = NULL;
 	_ui = NULL;
@@ -13,18 +14,17 @@ ChampDatabase::ChampDatabase()
 	// calls the function that will go through a draft.
 	createChampList(); // calls the function that creates the list of names for the champion
 
-	//setChampSearch();
-	//_champSearch = new ChampionSearch(_listOfChampNames);
 
 	createChamps(); // call the funtion that creates the vector of champion objects
 
-	_ui = new UserInput(_listOfChampNames, _champs);
-	completeADraft();
-	
+	_ui = new UserInput(_listOfChampNames, _champs); // allocates a new pointer object
+	completeADraft(); // function call that handles completeing a draft
 }
 
+//Deletes the pointers that we were using.
 ChampDatabase::~ChampDatabase()
 {
+	// checks to see if we were using any of the pointers. Deletes them if we were.
 	if (_cd == NULL)
 		delete _cd;
 	if (_ud == NULL)
@@ -37,20 +37,21 @@ ChampDatabase::~ChampDatabase()
 // this function completes one iteration of a draft. 
 void ChampDatabase::completeADraft()
 {
-	string resp = _ui->whatDraft();
+	string resp = _ui->whatDraft(); // asks what draft
 
-	allocateDraft(resp);
+	allocateDraft(resp); // creates a draft object to the user's specification
 }
 
 
+// checks to see what draft the user wants and allocates that draft
 void ChampDatabase::allocateDraft(string& resp)
 {
-	if (resp == "Computer Draft" || resp == "computer draft")
+	if (resp == "Computer Draft" || resp == "computer draft") // checks to see if the user wants a computer draft
 		_cd = new CompDraft(_listOfChampNames, _champs);
-	else if (resp == "User Draft" || resp == "user draft")
+	else if (resp == "User Draft" || resp == "user draft") // checks to see if the user wants a user draft
 		_ud = new UserDraft(_listOfChampNames, _champs);
 	else
-		_ui->draftInputError();
+		_ui->draftInputError(); // returns an error if the user doesn't pick one of the above drafts
 }
 
 
@@ -61,7 +62,7 @@ void ChampDatabase::addChamp(string &champName)
 {
 	Champion c;  // creates a new Champion object to make
 	fstream filein;
-	string s = "empty";
+	string s = "empty"; // sets string to "empty" because of some input issues we were having when we set it to ""
 
 	c.setName(champName); // sets the name of the champion
 
@@ -75,20 +76,21 @@ void ChampDatabase::addChamp(string &champName)
 
 	while (!filein.fail()) // reads in all of the data from the file
 	{
-
-		while(!(s == "")) // reads and adds data into c.goodCounters until the paragraph break
+		getline(filein, s); // set it up this way so that there isn't an empty string in any of the vectors
+		while(!(s == "")) // reads and adds data into c.goodCounters until the paragraph break ("")
 
 		{
-			getline(filein, s);
 			c.setGoodCounter(s);
+			getline(filein, s);
 		}
 
-		s = "empty";
+		s = "empty"; // so that s will not == "". If we didn't do this, it would skip this next while loop
 
+		getline(filein, s);
 		while (!(s == "")) // reads and adds data into c.badCounters until the paragraph break
 		{
-			getline(filein, s);
 			c.setBadCounter(s);
+			getline(filein, s);
 		}
 
 		getline(filein, s); // gets the primary role of the champion and adds it to the champion object
@@ -99,15 +101,16 @@ void ChampDatabase::addChamp(string &champName)
 
 		getline(filein, s); // clears the \n character in between the roles and the positions in the file
 
+		getline(filein, s);
 		while (!filein.fail()) // reads and adds data into c.positions until the paragraph break
 		{
-			getline(filein, s);
 			c.setPositions(s);
+			getline(filein, s);
 		}
 
 	}
 
-	_champs.push_back(c);
+	_champs.push_back(c); // adds Champion c to the vector of Champion Objects
 }
 
 
@@ -125,12 +128,13 @@ void ChampDatabase::createChampList()
 	}
 
 	string s; 
+	readin >> s;
 
 	// fills the vector of champion names
 	while (!readin.fail())
 	{
+		_listOfChampNames.push_back(s); // adds the string to the vector of strings that hold all of the champ names
 		readin >> s;
-		_listOfChampNames.push_back(s);
 	}
 }
 
@@ -142,19 +146,6 @@ void ChampDatabase::createChamps()
 		addChamp(_listOfChampNames[i]); // adds one champion object for each champion in the listOfChampNames vector
 }
 
-
-//void ChampDatabase::setChampSearch()
-//{
-//	_champSearch = new ChampionSearch(_listOfChampNames);
-//}
-
-
-// returns the specified champion from the vector of champions given the champion's name
-//Champion ChampDatabase::getChamp(string &champ)
-//{
-//	// searches for the champion and returns that champion
-//	return _champs[_champSearch->search(champ)];
-//}
 
 vector<Champion> ChampDatabase::getChamps() { return _champs; }
 vector<string> ChampDatabase::getList() { return _listOfChampNames; }

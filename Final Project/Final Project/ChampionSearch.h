@@ -16,11 +16,8 @@ private:
 	vector<string> _champs;
 
 public:
-	//ChampionSearch();
 	ChampionSearch(vector<string>&);
-	~ChampionSearch();
 
-	//int search(string&);
 	int search(string&, int, int);
 };
 

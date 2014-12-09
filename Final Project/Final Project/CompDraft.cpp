@@ -4,18 +4,14 @@ using namespace std;
 
 CompDraft::CompDraft(vector<string> listChamps, vector<Champion> champs) : Draft(listChamps, champs)
 {
-	executeDraft();
+	executeDraft(); // calls the execute draft method in its parent class.
 }
 
-//CompDraft::~CompDraft()
-//{
-//	delete _champSearch;
-//	delete _ui;
-//}
 
 void CompDraft::pickChamps()
 {
-	compPick(7, 0);
+	// executes the correct pick order for the computer draft
+	compPick(7, 0); // the ints are commands on how the computer needs to pick
 	userPick();
 	userPick();
 	compPick(0, 1);
@@ -27,9 +23,12 @@ void CompDraft::pickChamps()
 	userPick();
 }
 
+
 void CompDraft::banChamps()
 {
-	_ui->draftOutput();
+	_ui->draftOutput(); // outputs the draft grid
+
+	// calls the correct order of the computer and user bans
 	for (int i = 0; i < 3; i++){
 		compBan();
 		userBan();

@@ -8,11 +8,11 @@ using namespace std;
 
 vector<string> Champion::getBadCounter() { return _badCounter; } // returns a list of champions that are bad counters
 vector<string> Champion::getGoodCounter(){ return _goodCounter; } // returns a list of champions that are good counters
-vector<string> Champion::getPositions() { return _positions; }
+vector<string> Champion::getPositions() { return _positions; } // returns a list of positions for the champion
 string Champion::getPrimaryRole() { return _primaryRole; } // returns the primary role 
 string Champion::getSecondaryRole() { return _secondaryRole; } // returns the secondary role
 string Champion::getName() { return _name; } // returns the name of the champion
-string Champion::getGoodChamp(int i) { return _goodCounter[i]; }
+string Champion::getGoodChamp(int i) { return _goodCounter[i]; } // returns the good counter specified by the parameter
 
 
 

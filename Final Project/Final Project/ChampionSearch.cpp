@@ -3,38 +3,27 @@
 using namespace std;
 
 
-//ChampionSearch::ChampionSearch() {} // default constructor
-
 //uses the list of champ names because they have the same indexes as the vector of champions
 ChampionSearch::ChampionSearch(vector<string> &champs) 
 {
-	_champs = champs;
+	_champs = champs; // sets the member _champs to 
 }
 
-ChampionSearch::~ChampionSearch(){}
 
-
-// searches for the champion name that is given to the function
-//int ChampionSearch::search(string &name)
-//{
-//	for (unsigned int i = 0; i < _champs.size(); i++)
-//	{
-//		if (_champs[i] == name)
-//			return i; // returns the index of where the champion can be found. 
-//	}
-//		return -1; // to say that it was not found
-//}
-
+// binary search through the vector of champ names
+// returns the index at which the champion is found
 int ChampionSearch::search(string &name, int low, int high)
 {
 	if (low > high)
-		return -1;
+		return -1; // returns -1 if the champion is not found
 
-	int mid = (low + high) / 2;
+	int mid = (low + high) / 2; // sets mid to the mid point between high and low
+
+	// checks to see whether name is left or right of _champs[mid] and calls the function again passing in the correct value
 	if (name < _champs[mid])
 		search(name, low, mid-1);
 	else if (name == _champs[mid])
-		return mid;
+		return mid; // checks to make sure name doesn't == mid. if it does, it returns it. 
 	else
 		search(name, mid+1, high);
 }

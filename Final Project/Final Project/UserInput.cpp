@@ -136,7 +136,8 @@ void UserInput::outputChamp(string &name)
 	cout << endl;
 	cout << setw(20) << "Bad counters: " << setw(20) << "Good counters: " << endl;
 
-	vector<vector<string>> champsOutputFormat(6);
+	// creates a small output matrix for the champ output.
+	vector<vector<string>> champsOutputFormat(6); 
 
 	for (int i = 0; i < 6; i++)
 		champsOutputFormat[i] = vector<string>(2);
@@ -147,12 +148,13 @@ void UserInput::outputChamp(string &name)
 			champsOutputFormat[i][j] = "-----------";
 	}
 
-	for (int i = 0; i < bad.size() - 1; i++)
+	for (int i = 0; i < bad.size(); i++)
 		champsOutputFormat[i][0] = bad[i];
-	for (int i = 0; i < good.size() - 1; i++)
+	for (int i = 0; i < good.size(); i++)
 		champsOutputFormat[i][1] = good[i];
 
 
+	// prints the champs output matrix
 	for (int i = 0; i < 6; i++)
 	{
 		for (int j = 0; j < 2; j++)
@@ -231,7 +233,7 @@ string UserInput::getInput()
 	cout << ">>: "; 
 	getline(cin, resp);
 
-	checkResp();
+	checkResp(); // checks each input to make sure that the user doesn't want something special
 
 	return resp;
 }
@@ -260,8 +262,6 @@ void UserInput::printMan()
 
 	cout << "<-q> to exit\n";
 
-	//cout << "-l: \n\t Used after the type of draft to choose the learning draft" << endl;
-	//cout << "\t<type_of_draft> <-l>" << endl;
 
 	getInput();
 	checkResp();
@@ -270,6 +270,7 @@ void UserInput::printMan()
 // checks to make sure that the user doesn't want something that the computer isn't asking for. 
 void UserInput::checkResp()
 {
+	// checks for special cases and executes if there was a special case called. 
 	if (resp == "-x")
 		exit(0);
 	
@@ -297,8 +298,6 @@ void UserInput::checkResp()
 		getInput();
 	}
 
-
-	//getInput();
 }
 
 
@@ -307,4 +306,4 @@ vector<vector<string>> UserInput::getDraftOutputFormat()
 	return draftOutputFormat;
 }
 
-void UserInput::draftInputError() { cout << "You have not selected a draft.\n"; }
+void UserInput::draftInputError() { cout << "You have not selected a draft.\n"; } // output error if user didn't enter an actual draft.

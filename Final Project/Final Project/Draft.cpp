@@ -137,14 +137,14 @@ string Draft::compChampPick(int& counter, int& pos, string picked)
 
 		champIn = _champs[index];
 
-		for (int i = 0; i < champIn.getGoodCounter().size() - 1; i++)//checks that the counter fulfills the required position
+		for (int i = 0; i < champIn.getGoodCounter().size(); i++)//checks that the counter fulfills the required position
 		{
 			index = _champSearch->search(champIn.getGoodChamp(i), 0, _champs.size());
 			champOut = _champs[index];
 
 			positions = champOut.getPositions();
 
-			for (int j = 0; j < positions.size() - 1; j++)
+			for (int j = 0; j < positions.size(); j++)
 			{
 				if (positions[j] == compPositions[pos] && !checkPick(picked) || !checkBan(picked))// checks for bans/picks
 					return champOut.getName();
@@ -161,7 +161,7 @@ string Draft::compChampPick(int& counter, int& pos, string picked)
 
 		positions = champOut.getPositions();
 
-		for (int j = 0; j < positions.size() - 1; j++)
+		for (int j = 0; j < positions.size(); j++)
 		{
 			if (positions[j] == compPositions[pos])
 				return champOut.getName();
